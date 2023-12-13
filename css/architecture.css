@@ -1497,3 +1497,72 @@ span.big-text {
     top: 5px;
 }
 
+.navigation ul ul {
+    display: none;
+    position: absolute;
+    top: 80%; /* Adjusted to be below the parent item */
+    left: 100;
+    margin-left: 65%;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.navigation ul li:hover > ul {
+    display: block; /* Changed to 'block' to override the 'none' display */
+}
+
+.navigation ul ul li {
+    width: 100%;
+    float: none;
+}
+.navigation ul ul li:hover {
+    background-color: transparent; /* Set the background color to transparent on hover */
+}
+
+.cd-primary-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cd-primary-nav li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative; /* Ensure the parent li is positioned relative */
+}
+
+.cd-primary-nav a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.cd-primary-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cd-primary-nav li:hover .dropdown-menu {
+    display: block;
+}
+
+.cd-primary-nav .dropdown-menu li {
+    display: block;
+    margin: 0;
+}
+
+.cd-primary-nav .social-icons {
+    margin-top: 10px;
+}
+
+.cd-primary-nav .social-icons a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+}
