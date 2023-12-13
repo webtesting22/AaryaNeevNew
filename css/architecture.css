@@ -1373,6 +1373,7 @@ span.big-text {
     justify-content: center;
     /* float: left; */
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .project-features .feature-sec {
