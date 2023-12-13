@@ -114,7 +114,7 @@ h6 {
 
 p {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 36px;
     color: #222222;
 }
@@ -202,6 +202,7 @@ img:hover {
     background: #000;
     padding: 25px 15px;
     border-radius: 50px;
+   
 }
 
 .header .logo {
@@ -1397,7 +1398,7 @@ span.big-text {
 }
 
 .project-detail .detail-sec {
-    width: 82%;
+    width: 100%;
     display: inline-block;
 }
 
@@ -1416,6 +1417,7 @@ span.big-text {
 
 .project-detail .text p {
     margin: 10px 0 0 0;
+    text-align: start;
 }
 
 .project-images {
