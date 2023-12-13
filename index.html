@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aaryaneev</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="icon" type="image/png" href="images/favicon-pearl.png">
+
+    <!--main file-->
+    <link href="css/architecture.css" rel="stylesheet" type="text/css">
+
+    <!--Architecture Font Icons-->
+    <link href="fonts/architecture.css" rel="stylesheet" type="text/css">
+
+    <!-- Default Color -->
+    <link href="css/default-color.css" rel="stylesheet" id="color" type="text/css">
+
+    <!-- Custom Menu -->
+    <link href="css/custom-menu.css" rel="stylesheet" type="text/css">
+
+    <!--Bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!--Revolution-->
+    <link href="css/settings.css" rel="stylesheet" type="text/css">
+
+    <!--Architecture Font Icons-->
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+    <!--Services Tabs-->
+    <link href="css/tabs.css" rel="stylesheet" type="text/css">
+
+    <!--Project Mouse hover-->
+    <link href="css/set1.css" rel="stylesheet" type="text/css">
+
+    <!--PreLoader-->
+    <link href="css/loader.css" rel="stylesheet" type="text/css">
+
+    <!--switcher-->
+    <link href="css/switcher.css" rel="stylesheet" type="text/css">
+    <style>
+        .our-studio span {
+            font-size: 16px;
+            text-align: start;
+            line-height: 31px;
+            margin-bottom: 30px;
+            width: 100%;
+
+        }
+
+        .our-studio h1 {
+            font-size: 65px;
+            text-align: start;
+            opacity: 0.1;
+            position: absolute;
+            left: -151px;
+            top: -227px;
+
+
+        }
+
+        #container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100vh;
+            background: #f5f5f5;
+
+            /* box-shadow: 0 30px 50px #dbdbdb; */
+
+        }
+
+        #container .slide .item {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            border-radius: 20px;
+            /* box-shadow: 0 30px 50px #505050; */
+            background-position: 50% 50%;
+            background-size: cover;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+        #container .slide .item:nth-child(1),
+        #container .slide .item:nth-child(2) {
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        #container .slide .item:nth-child(3) {
+            left: 80%;
+            top: 80%;
+        }
+        @media (max-width:500px){
+            #container .slide .item:nth-child(3) {
+            left: 25%;
+            top: 80%;
+        }
+
+        }
+
+        #container .slide .item:nth-child(4) {
+            left: calc(50% + 220px);
+        }
+
+        #container .slide .item:nth-child(5) {
+            left: calc(50% + 440px);
+        }
+
+        /* here n = 0, 1, 2, 3,... */
+        #container .slide .item:nth-child(n + 6) {
+            left: calc(50% + 660px);
+            opacity: 0;
+        }
+
+
+
+        #container .item .content {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 300px;
+            text-align: left;
+            color: #eee;
+            transform: translate(0, -50%);
+            font-family: system-ui;
+            display: none;
+        }
+
+        @media (max-width:600px){
+            #container .item .content {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            width: 300px;
+            text-align: left;
+            color: #eee;
+            transform: translate(0, -50%);
+            font-family: system-ui;
+            display: none;
+        }
+
+        }
+
+        #container .slide .item:nth-child(2) .content {
+            display: block;
+        }
+
+
+        #container .content .name {
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: bold;
+            opacity: 0;
+            animation: animate 1s ease-in-out 1 forwards;
+        }
+
+        #container .content .des {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.3s 1 forwards;
+        }
+
+        #container .content button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.6s 1 forwards;
+        }
+
+
+        @keyframes animate {
+            from {
+                opacity: 0;
+                transform: translate(0, 100px);
+                filter: blur(33px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0);
+                filter: blur(0);
+            }
+        }
+
+
+
+        .button {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .button button {
+            width: 22px;
+            height: 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            border: 1px solid #c7c7c7;
+            transition: 0.3s;
+        }
+
+        .button button:hover {
+            background: #ababab;
+            color: #fff;
+        }
+
+        .content .our-studio {
+            margin-top: 65rem;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="color-switcher" id="choose_color">
+        <a href="#." class="picker_close"><i class="fa fa-gear"></i></a>
+        <h5>STYLE SWITCHER</h5>
+        <!-- <div class="theme-colours">
+            <p>Choose Colour style</p>
+            <ul>
+                <li><a href="#." class="light-blue" id="light-blue"></a></li>
+                <li><a href="#." class="pink" id="pink"></a></li>
+                <li><a href="#." class="green" id="green"></a></li>
+                <li><a href="#." class="light-green" id="light-green"></a></li>
+                <li><a href="#." class="dark-blue" id="dark-blue"></a></li>
+                <li><a href="#." class="orange" id="orange"></a></li>
+                <li><a href="#." class="yellow" id="yellow"></a></li>
+                <li><a href="#." class="red" id="red"></a></li>
+                <li><a href="#." class="purple" id="purple"></a></li>
+                <li><a href="#." class="brown" id="brown"></a></li>
+            </ul>
+        </div> -->
+
+        <div class="choose-header">
+            <p>Choose Header</p>
+            <a href="#." id="header-one">One</a>
+            <a href="#." id="header-two">Two</a>
+        </div>
+        <div class="choose-footer">
+            <p>Choose Footer</p>
+            <a href="#." id="dark">Dark</a>
+            <a href="#." id="light">Light</a>
+        </div>
+
+        <div class="clr"></div>
+    </div>
+
+
+    <div id="wrap">
+
+        <!--Start PreLoader-->
+        <div id="loader-wrapper">
+            <div id="loader"><img src="./images/img/Aaryaneev Post (8).png" alt=""></div>
+            <!--/#loader-->
+            <div class="loader-section section-left"></div>
+            <!--/#loader-section section-left-->
+            <div class="loader-section section-right"></div>
+            <!--/#loader-section section-right-->
+        </div>
+        <!--End PreLoader-->
+
+
+        <div id="header-1">
+
+            <!-- CUSTOM MENU START -->
+            <div class="mobile-menu">
+                <div class="cd-header">
+                    <a class="cd-primary-nav-trigger" href="javascript:void(0);">
+                        <span class="cd-menu-icon"></span>
+                    </a>
+                </div>
+
+
+                <nav>
+                    <ul class="cd-primary-nav">
+                        <li class="cd-label">Custom Menu</li>
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Projects </a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <!-- <li><a href="news.html">news</a></li> -->
+                        <li><a href="contact-us.html">contact us</a></li>
+                        <li class="cd-label">Follow us</li>
+
+                        <li class="social-icons">
+                            <a href="#."><span class="icon-facebook-1"></span></a>
+                            <a href="#."><span class="icon-twitter-1"></span></a>
+                            <a href="#."><span class="icon-google"></span></a>
+                            <!-- <a href="#."><span class="icon-behance"></span></a> -->
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <!-- CUSTOM MENU END -->
+
+            <!-- MAIN HEADER -->
+
+            <header class="header-one cb-header">
+                <div class="container">
+
+                    <div class="header">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="logo">
+                                    <a href="index.html"><img src="./images/img/Aaryaneev Post (8).png"
+                                            style="width: 66%;" alt=""></a>
+                                </div>
+
+                                <div class="navigation">
+
+                                    <ul>
+                                        <li class="select"><a href="index.html">home</a></li>
+                                        <li><a href="work.html">Projects </a></li>
+                                        <li><a href="about.html">about us</a></li>
+                                        <!-- <li><a href="news.html">news</a></li> -->
+                                        <li><a href="contact-us.html">contact us</a></li>
+                                    </ul>
+
+                                    <!-- <div class="language">
+                                        <a href="#.">fr</a>
+                                    </div> -->
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+
+            <!-- STICKY HEADER -->
+            <header class="header-two cb-header">
+                <div class="container">
+
+                    <div class="header">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="logo">
+                                    <a href="#."><img src="./images/img/Aaryaneev Post (8).png" style="width: 35%;"
+                                            alt=""></a>
+                                </div>
+
+                                <div class="navigation">
+
+                                    <ul>
+                                        <li class="select"><a href="index.html">home</a></li>
+                                        <li><a href="work.html">Projects </a></li>
+                                        <li><a href="about.html">about us</a></li>
+                                        <!-- <li><a href="news.html">news</a></li> -->
+                                        <li><a href="contact-us.html">contact us</a></li>
+                                    </ul>
+
+                                    <!-- <div class="language">
+                                        <a href="#.">fr</a>
+                                    </div> -->
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+        </div>
+
+
+        <div id="header-2" style="display:none">
+
+            <header class="header-two-main">
+
+                <div class="header">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="logo">
+                                <a href="index.html"><img src="./images/img/Aaryaneev_logo.png" alt=""></a>
+                            </div>
+
+                            <div class="navigation">
+
+                                <ul>
+                                    <li class="select"><a href="#.">home</a></li>
+                                    <li><a href="work.html">Projects</a></li>
+                                    <li><a href="about.html">about us</a></li>
+                                    <!-- <li><a href="news.html">news</a></li> -->
+                                    <li><a href="contact-us.html">contact us</a></li>
+                                </ul>
+
+                                <!-- <div class="language">
+                                    <a href="#.">fr</a>
+                                </div> -->
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- CUSTOM MENU START -->
+            <div class="cd-header">
+                <a class="cd-primary-nav-trigger" href="javascript:void(0);">
+                    <span class="cd-menu-icon"></span>
+                </a>
+            </div>
+
+
+            <nav>
+                <ul class="cd-primary-nav">
+                    <li class="cd-label">Custom Menu</li>
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Projects</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <!-- <li><a href="news.html">news</a></li> -->
+                    <li><a href="contact-us.html">contact us</a></li>
+                    <li class="cd-label">Follow us</li>
+
+                    <li class="social-icons">
+                        <a href="#."><span class="icon-facebook-1"></span></a>
+                        <a href="#."><span class="icon-twitter-1"></span></a>
+                        <a href="#."><span class="icon-google"></span></a>
+                        <a href="#."><span class="icon-behance"></span></a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+
+
+
+
+
+
+        <!--
+	#################################
+		- THEMEPUNCH BANNER -
+	#################################
+	-->
+        <div class="container" style="padding-left: 0px; 
+     padding-right: 0px;" id="container">
+
+            <div class="slide">
+
+
+                <div class="item" style="background-image: url(./images/images/alain-pham-P_qvsF7Yodw-unsplash.jpg);">
+                    <div class="content">
+                        <div class="name">Construction Industry</div>
+                        <div class="des">34 Year Excellence In</div>
+                        <!-- <button>See More</button> -->
+                    </div>
+                </div>
+                <div class="item"
+                    style="background-image: url(./images/images/daniel-mccullough-HtBlQdxfG9k-unsplash\ \(1\).jpg);">
+                    <div class="content">
+                        <div class="name">Your Choise Simple</div>
+                        <div class="des">When Service Matter</div>
+                        <!-- <button>See More</button> -->
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(./images/images/ej-yao-D46mXLsQRJw-unsplash.jpg);">
+                    <div class="content">
+                        <div class="name">We Belive Substainability</div>
+                        <div class="des">Meet Your Engineers</div>
+                        <!-- <button>See More</button> -->
+                    </div>
+                </div>
+                <!-- <div class="item" style="background-image: url(./images/images/henry-co-3coKbdfnAFg-unsplash\ \(1\).jpg);">
+                <div class="content">
+                    <div class="name">Australia</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./images/images/ivan-henao-04rZ7R1fKhY-unsplash.jpg);">
+                <div class="content">
+                    <div class="name">Netherland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div> -->
+                <!-- <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+                <div class="content">
+                    <div class="name">Ireland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div> -->
+
+            </div>
+
+            <div class="button">
+                <button class="prev"></button>
+                <button class="next"></button>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- START CONTENT -->
+        <div class="content">
+
+            <!-- START OUR STUDIOS -->
+            <section class="our-studio">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="icons">
+                                <i class="icon-noun_35247_cc"></i>
+                                <i class="icon-noun_75842_cc"></i>
+                                <i class="icon-noun_301911_cc"></i>
+                            </div>
+                            <div class="row ">
+                                <div class="col-lg-6">
+                                    <h1>CREATING LANDMARKS <br></h1>
+                                    <span style="font-weight: 800;">SINCE 1989</span>
+                                    <span>For the past 30 years, Aaryarath has been in the business of creating
+                                        landmarks. It all began with a humble start, gathering funds from family members
+                                        to kickstart a marvelous project. The project was a resounding success, selling
+                                        100% of its offerings and leaving a cloud-nine impression. From there, Aaryarath
+                                        embarked on a steady and strategic journey, planning and executing additional
+                                        schemes. To fuel this expansion, capital was borrowed, and the dedicated efforts
+                                        of Mr. Ratilal, a single-handed individual, played a pivotal role. Today,
+                                        Aaryarath continues its journey, spanning generations and proudly bearing its
+                                        iconic brand name.</span>
+                                </div>
+                                <div class="col-lg-6"> <video src="./images/images/videos/AaryaneevVideo.mp4"
+                                        width="100%" muted autoplay controls></video></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END OUR STUDIOS -->
+
+
+            <!-- START OUR STUDIOS -->
+            <section class="sec-space">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="main-heading">
+                                <h4>Intelligent</h4>
+                                <h1>Projects</h1>
+                                <span>who try to belittle your ambitions Small people always do that but the really
+                                    great.</span>
+                            </div>
+                        </div>
+
+                        <div class="projects">
+
+
+                            <div class="col-md-6">
+                                <div class="project-sec">
+
+                                    <div class="work">
+                                        <div class="grid">
+
+                                            <figure class="effect-sadie">
+                                                <div class="image"><img
+                                                        src="./images/images/aaryavan/AARYAVAN Courtyard.jpg" alt="">
+                                                </div>
+
+                                                <figcaption>
+                                                    <h2><img src="images/plus.png" alt=""></h2>
+                                                    <a href="./work-detail2.html?content=link1"></a>
+                                                </figcaption>
+                                            </figure>
+
+                                            <div class="detail">
+                                                <span class="number">01</span>
+                                                <div class="text">
+                                                    <h6>AARYAVAN</h6>
+                                                    <span class="tags">2023 & Ongoing
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="project-sec">
+
+                                    <div class="work">
+                                        <div class="grid">
+
+                                            <figure class="effect-sadie">
+                                                <div class="image"><img
+                                                        src="./images/images/vibgyor/Harshilbhai_View_02 (2).jpg"
+                                                        alt=""></div>
+
+                                                <figcaption>
+                                                    <h2><img src="images/plus.png" alt=""></h2>
+                                                    <a href="./work-detail2.html?content=link2"></a>
+                                                </figcaption>
+                                            </figure>
+
+                                            <div class="detail">
+                                                <span class="number">02</span>
+                                                <div class="text">
+                                                    <h6>VIBGYOR - 4BHK</h6>
+                                                    <span class="tags">Prahlad Nagar - 2023 & Ongoing</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="project-sec">
+
+                                    <div class="work">
+                                        <div class="grid">
+
+                                            <figure class="effect-sadie">
+                                                <div class="image"><img
+                                                        src="./images/images/projects/Aaryabhumi (1).JPG" alt=""></div>
+
+                                                <figcaption>
+                                                    <h2><img src="images/plus.png" alt=""></h2>
+                                                    <a href="./work-detail2.html?content=link3"></a>
+                                                </figcaption>
+                                            </figure>
+
+                                            <div class="detail">
+                                                <span class="number">03</span>
+                                                <div class="text">
+                                                    <h6>AARYABHUMI</h6>
+                                                    <span class="tags">2023 & ongoing</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="project-sec">
+
+                                    <div class="work">
+                                        <div class="grid">
+
+                                            <figure class="effect-sadie">
+                                                <div class="image"><img
+                                                        src="./images/images/projects/aaryvart heights.jpeg" alt="">
+                                                </div>
+
+                                                <figcaption>
+                                                    <h2><img src="images/plus.png" alt=""></h2>
+                                                    <a href="./work-detail2.html?content=link4"></a>
+                                                </figcaption>
+                                            </figure>
+
+                                            <div class="detail">
+                                                <span class="number">04</span>
+                                                <div class="text">
+                                                    <h6>AARYAVART HEIGHTS</h6>
+                                                    <span class="tags">Prahladnagar - 2013</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="view-all">
+                            <a class="black-btn" href="work.html">view all projects</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+            <!-- END OUR STUDIOS -->
+            <!-- START OUR STUDIOS -->
+            <section class="sec-space">
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="main-heading">
+                                <h4>what-we-do</h4>
+                                <h1>services</h1>
+                                <span>who try to belittle your ambitions Small people always do that but the really
+                                    great.</span>
+                            </div>
+                        </div>
+
+
+                        <div class="clear"></div>
+                        <div class="what-we-do">
+                            <div id="tabbed-nav">
+                                <ul>
+                                    <li><a>HOME CONSTRUCTION</a></li>
+                                    <li><a>BUILDING REMODELS</a></li>
+                                    <li><a>EXTERIOR DESIGN
+                                        </a></li>
+                                    <li><a>SAFETY MANAGEMENT
+                                        </a></li>
+                                    <!-- <li><a>Complete</a></li> -->
+                                </ul>
+
+
+                                <div>
+
+                                    <div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="welcome-serv-img">
+                                                    <img src="images/services-img1.jpg" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="detail">
+                                                    <p><span class="big-text">W</span>e build your custom home, on time
+                                                        and on budget, with quality craftsmanship.</p>
+                                                    <!-- <a href="work.html" class="read-more-btn">Read More</a> -->
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="welcome-serv-img">
+                                                    <img src="images/services-img2.jpg" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="detail">
+                                                    <p><span class="big-text">W</span>e transform your space to meet
+                                                        your changing needs and budget.
+
+                                                    </p>
+                                                    <!-- <a href="work.html" class="read-more-btn">Read More</a> -->
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="welcome-serv-img">
+                                                    <img src="images/services-img3.jpg" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="detail">
+                                                    <p><span class="big-text">E</span>xterior design that enhances the
+                                                        beauty and functionality of your building.</p>
+                                                    <!-- <a href="work.html" class="read-more-btn">Read More</a> -->
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="welcome-serv-img">
+                                                    <img src="images/services-img4.jpg" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <div class="detail">
+                                                    <p><span class="big-text">S</span>afety management is our top
+                                                        priority, ensuring a safe and healthy work environment for all.
+                                                    </p>
+                                                    <!-- <a href="work.html" class="read-more-btn">Read More</a> -->
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <!-- <div>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="welcome-serv-img">
+                                        <img src="images/services-img5.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="detail">
+                                        <p><span class="big-text">K</span>eep away from people who try to belittle your ambitions Small people always do that but the really great. Friendly neighbour there that power. Architecture Theme Keep away
+                                            from people who try to belittle your ambitions Small people always do that but the really great. <br/><br/> who try to belittle your ambitions Small people always do that but the really great. Architecture
+                                            Theme Friendly neighbour there that power.</p>
+                                        <a href="work.html" class="read-more-btn">Read More</a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div> -->
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+        <!-- END CONTENT -->
+
+
+        <!-- START OUR STUDIOS -->
+        <section class="sec-space clients-words">
+            <div class="container">
+
+                <div class="col-md-12">
+                    <div class="main-heading white">
+                        <!-- <h4>kind-words</h4> -->
+                        <h1>WHAT PEOPLE SAID</h1>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12">
+
+                    <div class="kind-words">
+                        <div id="client-words" class="owl-carousel">
+
+                            <div>
+                                <p>Purchasing through Aaryaneev Developers was effortless. They facilitated our search
+                                    for our ideal home and expertly navigated us through the entire process, leaving us
+                                    thrilled with our new residence.</p>
+                                <span>- BHAVNA, <span class="client">client</span></span>
+                            </div>
+
+                            <div>
+                                <p>Aaryaneev's team made our inaugural home purchase stress-free. They possessed
+                                    expertise, patience, and consistently prioritized our best interests, ensuring a
+                                    smooth and enjoyable process.</p>
+                                <span>- JAY, <span class="client">client</span></span>
+                            </div>
+
+                            <div>
+                                <p>I never anticipated a home purchase could be so seamless. Aaryaneev's responsiveness
+                                    and exceptional efforts in discovering the perfect apartment left us thoroughly
+                                    impressed and eager to recommend their services.</p>
+                                <span>- AAKASH, <span class="client">client</span></span>
+                            </div>
+                            <div>
+                                <p>Our Aaryaneev experience was outstanding. Buying a property with them felt like being
+                                    embraced by a caring family, and their unwavering trustworthiness shone throughout.
+                                    Delighted with their service and quality.</p>
+                                <span>- ARCHIT, <span class="client">client</span></span>
+                            </div>
+                            <div>
+                                <p>Aaryaneev's assistance in discovering our exquisite home is deeply appreciated. Their
+                                    unparalleled client dedication and expertise have left us overjoyed with our
+                                    acquisition.</p>
+                                <span>- DIPAL, <span class="client">client</span></span>
+                            </div>
+                            <div>
+                                <p>Acquiring property from Aaryaneev felt like a family environment, and their
+                                    exceptional trustworthiness was evident. We're thoroughly satisfied with the service
+                                    and quality they delivered.</p>
+                                <span>- RISHABH, <span class="client">client</span></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <!-- START FOOTER -->
+        <footer class="footer" id="footer">
+            <div class="container">
+
+                <div class="footer-detail">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="footer-sec">
+                                <h3>LET’S TALK</h3>
+                                <span>+91 7874608282 <br />aaryaneevdevelopers@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="footer-sec">
+                                <h3>find us</h3>
+                                <span>205, ABHIRAJ COMPLEX, 68B SWASTIK SOCIETY, NAVRANGPURA,
+                                    Ahmedabad, Gujarat, 380009</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="footer-sec">
+                                <h3>FOLLOW US</h3>
+                                <div class="social-icons">
+                                    <a href="#." class="fb"><i class="icon-facebook-1"></i></a>
+                                    <a href="#." class="tw"><i class="icon-twitter-1"></i></a>
+                                    <a href="#." class="gp"><i class="icon-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyrights">
+                    <div class="container">
+                        <p>Copyright © 2023 Outlead Solutions. All rights reserved</p>
+                        <!-- <span>Design by: <a href="#.">Brighthemes</a></span> -->
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- END FOOTER -->
+
+        <!--       back to top button -->
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+        <!--       back to top button -->
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- Sticky Header -->
+    <script type="text/javascript" src="js/sticky-header.js"></script>
+
+    <!-- SMOOTH SCROLL -->
+    <script type="text/javascript" src="js/scroll-desktop-smooth.js"></script>
+
+    <!-- Custom Menu -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- START REVOLUTION SLIDER -->
+    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+
+    <!-- SERVICES Tabs -->
+    <script type="text/javascript" src="js/tabs.js"></script>
+
+    <!-- OWL CAROUSEL -->
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+
+    <!-- CUSTOM -->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!-- Revolution Slider -->
+    <script type="text/javascript"> let next = document.querySelector('.next')
+        let prev = document.querySelector('.prev')
+
+        next.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').appendChild(items[0])
+        })
+
+        prev.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+        }) // Autoplay every 3 seconds
+        setInterval(function () {
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.slide').appendChild(items[0])
+        }, 3000);
+        jQuery(document).ready(function () {
+
+
+
+            jQuery('.tp-banner').show().revolution({
+                dottedOverlay: "none",
+                delay: 16000,
+                startwidth: 1920,
+                startheight: 940,
+                hideThumbs: 200,
+
+                thumbWidth: 100,
+                thumbHeight: 50,
+                thumbAmount: 5,
+
+                navigationType: "bullets",
+                navigationArrows: "solo",
+                navigationStyle: "preview",
+
+                touchenabled: "on",
+                onHoverStop: "on",
+
+                swipe_velocity: 0.7,
+                swipe_min_touches: 1,
+                swipe_max_touches: 1,
+                drag_block_vertical: false,
+
+                parallax: "mouse",
+                parallaxBgFreeze: "on",
+                parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
+
+                keyboardNavigation: "off",
+
+                navigationHAlign: "center",
+                navigationVAlign: "bottom",
+                navigationHOffset: 0,
+                navigationVOffset: 20,
+
+                soloArrowLeftHalign: "left",
+                soloArrowLeftValign: "center",
+                soloArrowLeftHOffset: 20,
+                soloArrowLeftVOffset: 0,
+
+                soloArrowRightHalign: "right",
+                soloArrowRightValign: "center",
+                soloArrowRightHOffset: 20,
+                soloArrowRightVOffset: 0,
+
+                shadow: 0,
+                fullWidth: "on",
+                fullScreen: "off",
+
+                spinner: "spinner4",
+
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+
+                shuffle: "off",
+
+                autoHeight: "off",
+                forceFullWidth: "off",
+
+
+
+                hideThumbsOnMobile: "off",
+                hideNavDelayOnMobile: 1500,
+                hideBulletsOnMobile: "off",
+                hideArrowsOnMobile: "off",
+                hideThumbsUnderResolution: 0,
+
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                videoJsPath: "rs-plugin/videojs/",
+                fullScreenOffsetContainer: ""
+            });
+
+
+
+
+        }); //ready// ===== Scroll to Top ==== 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function () {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop: 0                       // Scroll to top of body
+            }, 500);
+        });
+    </script>
+
+
+</body>
+
+</html>
