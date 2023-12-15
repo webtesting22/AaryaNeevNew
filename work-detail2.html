@@ -123,21 +123,32 @@
             align-items: center;
             min-height: 100px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            border-top: 2px solid transparent; 
+            border-top: 2px solid transparent;
             transition: .5s;
-            
+
             /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 
         }
+
         .amenities_card .inside-card:hover {
-           border-top: 2px solid #e7a920;   
+            border-top: 2px solid #e7a920;
 
-           transition: .5s;
-            
+            transition: .5s;
+
             /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 
         }
-        
+
+        .amenities_card .inside-card .card-header {
+            display: flex;
+            padding-left: 10px;
+        }
+
+        .amenities_card .inside-card img {
+            width: 40%;
+            /* aspect-ratio: 3/2;
+            object-fit: contain; */
+        }
 
         .amenities_card .inside-card .card-body {
             margin-top: 20px;
@@ -150,7 +161,7 @@
             /* font-weight: 600; */
         }
 
-        .section-title  h1 {
+        .section-title h1 {
             position: absolute;
             font-size: 80px;
             margin-left: -23px;
@@ -164,8 +175,12 @@
         }
 
         .section-title h2 {
-            font-size: 18px;
-            font-weight: 500;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .section-title h2::first-letter {
+            font-size: 40px;
+            font-weight: 600;
         }
 
         .more-aminities {
@@ -190,13 +205,19 @@
             margin-top: 29px;
             transition: 1s;
         }
-        .modal-dialog{
+
+        .modal-dialog {
             max-width: 900px;
-           
+
         }
-        .modal-content{
-        padding: 20px 20px;
-           
+
+        .modal-content {
+            padding: 20px 20px;
+
+        }
+
+        .col-lg-4 {
+            display: none;
         }
     </style>
     <script>
@@ -533,6 +554,7 @@
                     <div class="col-lg-4 col-md-4 col-xs-6">
                         <div class="inside-card">
                             <div class="card-header">
+                                <img src="./images/images/icons/1.png">
                                
                             </div>
                             <div class="card-body">
@@ -545,7 +567,7 @@
                     <div class="col-lg-4 col-md-4 col-xs-6">
                         <div class="inside-card">
                             <div class="card-header">
-                                
+                                <img src="./images/images/icons/2.png">
                             </div>
                             <div class="card-body">
                                 <p>Children Play Area</p>
@@ -556,7 +578,7 @@
                     <div class="col-lg-4 col-md-4 col-xs-6 ">
                         <div class="inside-card">
                             <div class="card-header">
-                             
+                                <img src="./images/images/icons/3.png">
                             </div>
                             <div class="card-body">
                                 <p>Gym</p>
@@ -567,7 +589,7 @@
                     <div class="col-lg-4 col-md-4 col-xs-6 ">
                         <div class="inside-card">
                             <div class="card-header">
-                               
+                                <img src="./images/images/icons/4.png">
                             </div>
                             <div class="card-body">
                                 <p>Indoor Games</p>
@@ -578,7 +600,7 @@
                     <div class="col-lg-4 col-md-4 col-xs-6 ">
                         <div class="inside-card">
                             <div class="card-header">
-                              
+                                <img src="./images/images/icons/8.png">
                             </div>
                             <div class="card-body">
                                 <p>Seating Area</p>
@@ -589,7 +611,7 @@
                     <div class="col-lg-4 col-md-4 col-xs-6 ">
                         <div class="inside-card">
                             <div class="card-header">
-                               
+                                <img src="./images/images/icons/6.png">
                             </div>
                             <div class="card-body">
                                 <p>Attractive Foyer</p>
@@ -597,7 +619,96 @@
                             </div>
                         </div>
                     </div>
-                    <button class="more-aminities" data-bs-toggle="modal" data-bs-target="#exampleModal">More Aminities</button>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/7.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Banquet Hall</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/5.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Children Day Care Center</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/9.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Jogging Track</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/10.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Open Air Yoga Deck</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/11.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Green Lawn Area</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/12.png">
+                            </div>
+                            <div class="card-body">
+                                <p>CCTV Camera</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/13.png">
+                            </div>
+                            <div class="card-body">
+                                <p>24 Hour Security</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/14.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Fire Safety</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="more-aminities load-more">More Aminities</button>
                     <!-- Button trigger modal -->
 
 
@@ -7691,6 +7802,20 @@
     <script type="text/javascript" src="js/custom.js"></script>
 
     <script type="text/javascript">
+
+        $(function () {
+            $(".col-md-4").slice(0, 3).show();
+            $("body").on('click touchstart', '.load-more', function (e) {
+                e.preventDefault();
+                $(".col-md-4:hidden").slice(0, 3).slideDown();
+                if ($(".col-md-4:hidden").length == 0) {
+                    $(".load-more").css('visibility');
+                }
+                // $('html,body').animate({
+                //     scrollTop: $(this).offset().top
+                // }, 500);
+            });
+        });
         $(document).ready(function () {
 
 
