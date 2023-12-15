@@ -1368,7 +1368,7 @@ span.big-text {
 /*..... WORK DETAIL ......*/
 
 .project-features {
-    background: #f7f8f9;
+    background: #f0f1f2;
     padding: 35px;
     display: flex;
     justify-content: center;
@@ -1381,7 +1381,7 @@ span.big-text {
     float: left;
     width: 16%;
     text-align: center;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .project-features .feature-sec h6 {
