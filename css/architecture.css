@@ -1381,9 +1381,12 @@ span.big-text {
     float: left;
     width: 16%;
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.project-features .feature-sec h6 {}
+.project-features .feature-sec h6 {
+    font-weight: 700;
+}
 
 .project-features .feature-sec span {
     margin: 5px 0 0 0;
