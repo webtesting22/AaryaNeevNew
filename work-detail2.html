@@ -219,6 +219,11 @@
         .col-lg-4 {
             display: none;
         }
+        #one,
+        #two,
+        #three{
+            display: block ;
+        }
     </style>
     <script>
         function getQueryParam(name) {
@@ -439,7 +444,7 @@
                     <h1>Amenities</h1>
                 </div>
                 <div class="row amenities_card" style="margin-top: 3rem; text-align: center;">
-                    <div class="col-lg-4 col-md-4 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-xs-6" id="one">
                         <div class="inside-card">
                             <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/16.png">
@@ -452,7 +457,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-xs-6" id="one">
                         <div class="inside-card">
                             <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/17.png">
@@ -463,7 +468,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                    <div class="col-lg-4 col-md-4 col-xs-6 " id="one">
                         <div class="inside-card">
                             <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/18.png">
@@ -672,7 +677,7 @@
                     <h1>Amenities</h1>
                 </div>
                 <div class="row amenities_card" style="margin-top: 3rem; text-align: center;">
-                    <div class="col-lg-4 col-md-4 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-xs-6" id="one">
                         <div class="inside-card">
                             <div class="card-header">
                                 <img src="./images/images/icons/1.png">
@@ -685,7 +690,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-xs-6" id="two">
                         <div class="inside-card">
                             <div class="card-header">
                                 <img src="./images/images/icons/2.png">
@@ -696,7 +701,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                    <div class="col-lg-4 col-md-4 col-xs-6 " id="three">
                         <div class="inside-card">
                             <div class="card-header">
                                 <img src="./images/images/icons/3.png">
@@ -7866,19 +7871,27 @@
 
     <script type="text/javascript">
 
-        $(function () {
-            $(".col-md-4").slice(0, 3).show();
-            $("body").on('click touchstart', '.load-more', function (e) {
-                e.preventDefault();
-                $(".col-md-4:hidden").slice(0, 3).slideDown();
-                if ($(".col-md-4:hidden").length == 0) {
-                    $(".load-more").css('visibility');
-                }
-                // $('html,body').animate({
-                //     scrollTop: $(this).offset().top
-                // }, 500);
-            });
-        });
+$(function () {
+    // Show the first 3 items by default
+    $(".col-md-4").slice(0, 3).slideDown();
+
+    // Set up the click/touchstart event
+    $("body").on('click touchstart', '.load-more', function (e) {
+        e.preventDefault();
+        // Show the next 3 hidden items on each click
+        $(".col-md-4:hidden").slice(0, 3).slideDown();
+
+        // If no more hidden items, hide the "load-more" button
+        if ($(".col-md-4:hidden").length == 0) {
+            $(".load-more").css('visibility', 'hidden');
+        }
+
+        // Optional: Scroll to the top of the newly shown items
+        // $('html,body').animate({
+        //     scrollTop: $(this).offset().top
+        // }, 500);
+    });
+});
         $(document).ready(function () {
 
 
