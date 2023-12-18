@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aaryaneev</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="icon" type="image/png" href="images/favicon-pearl.png">
+
+    <!--main file-->
+    <link href="css/architecture.css" rel="stylesheet" type="text/css">
+
+    <!--Architecture Font Icons-->
+    <link href="fonts/architecture.css" rel="stylesheet" type="text/css">
+
+    <!-- Default Color -->
+    <link href="css/default-color.css" rel="stylesheet" id="color" type="text/css">
+
+    <!-- Custom Menu -->
+    <link href="css/custom-menu.css" rel="stylesheet" type="text/css">
+
+    <!--Bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!--Revolution-->
+    <link href="css/settings.css" rel="stylesheet" type="text/css">
+
+    <!-- Carousel -->
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+    <!-- Services Tabs -->
+    <link href="css/tabs.css" rel="stylesheet" type="text/css">
+
+    <!-- Project Mouse hover -->
+    <link href="css/set1.css" rel="stylesheet" type="text/css">
+
+    <!-- Project Mouse hover -->
+    <link href="css/fancybox.css" rel="stylesheet" type="text/css">
+
+    <!--PreLoader-->
+    <link href="css/loader.css" rel="stylesheet" type="text/css">
+
+    <link href="css/work2.css" rel="stylesheet" type="text/css">
+    <link href="./css/projectstab.css" rel="stylesheet" type="text/css">
+    <!--switcher-->
+    <link href="css/switcher.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .project-images .img {
+            width: 100%;
+        }
+
+        .project-hr {
+            background-color: #b7410e;
+            border: 2px solid #b7410e;
+            border-radius: 50%;
+        }
+
+        .location-heading h1 {
+            transform: rotate(-90deg);
+            position: absolute;
+            left: -9rem;
+            margin-top: 17rem;
+            color: #616161;
+        }
+
+
+
+        /* .location-heading {
+            position: absolute;
+            opacity: 0.2;
+            transform: rotate(-90deg);
+            margin-top: 190px;
+        } */
+
+        @media (max-width:600px) {
+            /* .location-heading {
+                position: static;
+                opacity: 0.5;
+                transform: none;
+                margin-top: 0px;
+            } */
+
+            /* .location-heading h1 {
+                font-size: 65px;
+            } */
+        }
+
+
+
+        .animated-img {
+            position: sticky;
+            top: 5rem;
+            z-index: 2;
+        }
+
+        .animated-div {
+            background-color: #272727;
+            position: sticky;
+            z-index: 3;
+            top: 5rem;
+
+        }
+
+        .animated-div-two {
+            background-color: white;
+            position: sticky;
+            z-index: 4;
+            top: 5rem;
+        }
+
+        .amenities_card .inside-card {
+            background-color: #f7f7f7;
+            padding: 16px 10px;
+            display: flex;
+            justify-content: center;
+            /* flex-direction: column; */
+            align-items: center;
+            min-height: 100px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-top: 2px solid transparent;
+            transition: .5s;
+
+            /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+
+        }
+
+        .amenities_card .inside-card:hover {
+            border-top: 2px solid #e7a920;
+
+            transition: .5s;
+
+            /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+
+        }
+
+        .amenities_card .inside-card .card-header {
+            display: flex;
+            padding-left: 10px;
+        }
+
+        .amenities_card .inside-card img {
+            width: 40%;
+            /* aspect-ratio: 3/2;
+            object-fit: contain; */
+        }
+
+        .amenities_card .inside-card .card-body {
+            margin-top: 20px;
+        }
+
+        .amenities_card .inside-card .card-body p {
+            font-size: 1.15rem;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-weight: 600; */
+        }
+
+        .section-title h1 {
+            position: absolute;
+            font-size: 80px;
+            margin-left: -23px;
+            margin-top: -81px;
+            opacity: 0.04;
+            font-weight: 700;
+        }
+
+        @media (max-width:600px) {
+            .section-title h1 {
+                position: absolute;
+                font-size: 40px;
+                margin-left: -23px;
+                margin-top: -81px;
+                opacity: 0.04;
+                font-weight: 700;
+            }
+
+        }
+
+        .amenities_card .col-lg-4 {
+            margin-top: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .section-title h2::first-letter {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .more-aminities {
+            background: transparent;
+            border: 1px solid black;
+            padding: 11px 19px;
+            float: left;
+            margin-left: 22px;
+            margin-top: 29px;
+            transition: 1s;
+            width: 200px;
+            margin-bottom: 2rem;
+        }
+
+        .more-aminities:hover {
+            background: black;
+            color: white;
+            border: 1px solid black;
+            padding: 11px 19px;
+            float: left;
+            margin-left: 22px;
+            margin-top: 29px;
+            transition: 1s;
+        }
+
+        .modal-dialog {
+            max-width: 900px;
+
+        }
+
+        .modal-content {
+            padding: 20px 20px;
+
+        }
+
+        .col-lg-4 {
+            display: none;
+        }
+
+        #one,
+        #two,
+        #three {
+            display: block;
+        }
+
+        /* Main Styles */
+        .main .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .card {
+            color: var(--color-black);
+            border-radius: 2px;
+            background: var(--color-white);
+            box-shadow: var(--box-shadow);
+        }
+
+        .main .card-image {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding-top: 70%;
+            background: var(--color-white);
+        }
+
+        .main .card-image img {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            .main .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+            }
+        }
+
+        #modalForm input {
+            box-shadow: none;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid #e7a82099;
+        }
+    </style>
+
+</head>
+
+<body class="demo-juicy-projects">
+
+
+
+
+
+    <div id="wrap">
+
+        <!--Start PreLoader-->
+        <div id="loader-wrapper">
+            <div id="loader"><img src="./images/img/White.gif" alt=""></div>
+            <!--/#loader-->
+            <div class="loader-section section-left"></div>
+            <!--/#loader-section section-left-->
+            <div class="loader-section section-right"></div>
+            <!--/#loader-section section-right-->
+        </div>
+        <!--End PreLoader-->
+
+
+        <div id="header-1">
+
+            <!-- CUSTOM MENU START -->
+            <div class="mobile-menu">
+                <div class="cd-header">
+                    <a class="cd-primary-nav-trigger" href="javascript:void(0);">
+                        <span class="cd-menu-icon"></span>
+                    </a>
+                </div>
+
+
+                <nav>
+                    <ul class="cd-primary-nav">
+                        <!-- <li class="cd-label">Custom Menu</li> -->
+
+                        <li><a href="index.html">Home</a></li>
+                        <li class="select">
+                            <a>Projects</a>
+                            <!-- Dropdown menu for Projects -->
+                            <ul class="dropdown-menu">
+                                <li><a href="residential.html">Residential</a></li>
+                                <li><a href="commercial.html">Commercial</a></li>
+                                <!-- Add more project links as needed -->
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <!-- <li><a href="news.html">news</a></li> -->
+                        <li><a href="contact-us.html">contact us</a></li>
+                        <li class="cd-label">Follow us</li>
+
+                        <li class="social-icons">
+                            <a href="#."><span class="icon-facebook-1"></span></a>
+                            <a href="#."><span class="icon-twitter-1"></span></a>
+                            <!-- <a href="#."><span class="icon-google"></span></a> -->
+                            <!-- <a href="#."><span class="icon-behance"></span></a> -->
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <!-- CUSTOM MENU END -->
+
+            <!-- MAIN HEADER -->
+
+            <header class="header-one cb-header">
+                <div class="container">
+
+                    <div class="header">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="logo">
+                                    <a href="index.html"><img src="./images/img/Aaryaneev Post (8).png"
+                                            style="width: 66%;" alt=""></a>
+                                </div>
+
+                                <div class="navigation">
+
+                                    <ul>
+                                        <li><a href="index.html">home</a></li>
+                                        <li class="select">
+                                            <a href="">Projects</a>
+                                            <!-- Dropdown menu for Projects -->
+                                            <ul class="dropdown-menu">
+                                                <li><a href="residential.html">Residential</a></li>
+                                                <li><a href="commercial.html">Commercial</a></li>
+                                                <!-- Add more project links as needed -->
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">about us</a></li>
+                                        <!-- <li><a href="news.html">news</a></li> -->
+                                        <li><a href="contact-us.html">contact us</a></li>
+                                    </ul>
+
+                                    <!-- <div class="language">
+                                        <a href="#.">fr</a>
+                                    </div> -->
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+
+            <!-- STICKY HEADER -->
+            <header class="header-two cb-header">
+                <div class="container">
+
+                    <div class="header">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="logo">
+                                    <a href="index.html"><img src="./images/img/Aaryaneev Post (8).png"
+                                            style="width: 35%;" alt=""></a>
+                                </div>
+
+                                <div class="navigation">
+
+                                    <ul>
+                                        <li><a href="index.html">home</a></li>
+                                        <li class="select">
+                                            <a>Projects</a>
+                                            <!-- Dropdown menu for Projects -->
+                                            <ul class="dropdown-menu">
+                                                <li><a href="residential.html">Residential</a></li>
+                                                <li><a href="commercial.html">Commercial</a></li>
+                                                <!-- Add more project links as needed -->
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">about us</a></li>
+                                        <!-- <li><a href="news.html">news</a></li> -->
+                                        <li><a href="contact-us.html">contact us</a></li>
+                                    </ul>
+
+                                    <!-- <div class="language">
+                                        <a href="#.">fr</a>
+                                    </div> -->
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+        </div>
+
+
+        <div id="header-2" style="display:none">
+
+            <header class="header-two-main">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="logo">
+                                <a href="index.html"><img src="./images/img/Aaryaneev_logo.png" alt=""></a>
+                            </div>
+                            <div class="navigation">
+                                <ul>
+                                    <li><a href="#.">home</a></li>
+                                    <li class="select">
+                                        <a>Projects</a>
+                                        <!-- Dropdown menu for Projects -->
+                                        <ul class="dropdown-menu">
+                                            <li><a href="residential.html">Residential</a></li>
+                                            <li><a href="commercial.html">Commercial</a></li>
+                                            <!-- Add more project links as needed -->
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">about us</a></li>
+                                    <!-- <li><a href="news.html">news</a></li> -->
+                                    <li><a href="contact-us.html">contact us</a></li>
+                                </ul>
+                                <!-- <div class="language">
+                                    <a href="#.">fr</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- CUSTOM MENU START -->
+            <div class="cd-header">
+                <a class="cd-primary-nav-trigger" href="javascript:void(0);">
+                    <span class="cd-menu-icon"></span>
+                </a>
+            </div>
+
+
+            <nav>
+                <ul class="cd-primary-nav">
+                    <!-- <li class="cd-label">Custom Menu</li> -->
+
+                    <li><a href="index.html">Home</a></li>
+                    <li class="select">
+                        <a>Projects</a>
+                        <!-- Dropdown menu for Projects -->
+                        <ul class="dropdown-menu">
+                            <li><a href="residential.html">Residential</a></li>
+                            <li><a href="commercial.html">Commercial</a></li>
+                            <!-- Add more project links as needed -->
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <!-- <li><a href="news.html">news</a></li> -->
+                    <li><a href="contact-us.html">contact us</a></li>
+                    <li class="cd-label">Follow us</li>
+
+                    <li class="social-icons">
+                        <a href="#."><span class="icon-facebook-1"></span></a>
+                        <a href="#."><span class="icon-twitter-1"></span></a>
+                        <!-- <a href="#."><span class="icon-google"></span></a> -->
+                        <!-- <a href="#."><span class="icon-behance"></span></a> -->
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+
+
+        <!-- START SUB-BANNER -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text-detail">
+                    <h2 style="font-weight: bold;">work detail</h2>
+                    <p>"Crafting Dreams, Building Realities: Where Precision Meets Passion in Every Construction
+                        Project."</p>
+                    <ul>
+                        <li><a href="index.html">Home</a> <span>/</span></li>
+                        <li class="select">
+                            <a href="">Projects</a><span>/</span>
+                            <!-- Dropdown menu for Projects -->
+                            <ul class="dropdown-menu">
+                                <li><a href="residential.html">Residential</a></li>
+                                <li><a href="commercial.html">Commercial</a></li>
+                                <!-- Add more project links as needed -->
+                            </ul>
+                        </li>
+                        <li class="item-select"><a>Detail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- END SUB-BANNER -->
+
+
+        <!-- START CONTENT -->
+
+        <!-- END CONTENT -->
+        <div class="sub-content">
+
+            <!-- START PROJECT DETAIL -->
+            <section>
+
+                <div class="row" style="width:100%; margin:0px 0px;">
+                    <div class="col-md-12" style="padding:0px;">
+
+                        <div class="container style=" padding:0px;">
+                            <div class="project-features">
+
+                                <div class="feature-sec">
+                                    <h6>Location</h6>
+                                    <span>AHMEDABAD</span>
+                                </div>
+                                <div class="feature-sec">
+                                    <h6>Stories</h6>
+                                    <span>11 STOREY</span>
+                                </div>
+            
+                                <div class="feature-sec">
+                                    <h6>Categories</h6>
+                                    <span>Residential</span>
+                                </div>
+            
+                                <div class="feature-sec">
+                                    <h6>Size</h6>
+                                    <span>"25,000 SHOP SQFT + 185,000 RESIDENCE SQFT = TOTAL= 2,10,000 SQFT"</span>
+                                </div>
+                                <div class="feature-sec">
+                                    <h6>Total No. of units</h6>
+                                    <span>"SHOPS-19, RESIDENCE-88 TOTAL-107"</span>
+                                </div>
+            
+                             
+            
+                                <div class="feature-sec">
+                                    <h6>STATUS</h6>
+                                    <span>Completed</span>
+                                </div>   <div class="feature-sec">
+                                    <h6>Contact</h6>
+                                    <span>+91 7874608282</span>
+                                </div>
+            
+                            </div>
+
+                        </div>
+                        <!-- END PROJECT FEATURES -->
+
+
+
+                        <!-- START PROJECT FEATURES -->
+                        <div class="container">
+                            <div class="project-detail">
+
+                                <div class="detail-sec">
+                                    <img src="images/house-icon.png" alt="">
+                                    <div class="text">
+                                        <h3>AARYABHUMI</h3>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are
+                                            going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text All the Lorem Ipsum generators on the Internet. slightly believable If you are going
+                                            to use a passage.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="view-all">
+                                <a class="black-btn"
+                                    style="cursor: pointer; margin-bottom: 30px; text-decoration: none;"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Download Brochure</a>
+                                <a class="black-btn" style=" text-decoration: none;" href="tel:+91 7874608282">Contact
+                                    Us</a>
+                            </div>
+                        </div>
+
+                        <br> <br>
+
+                        <!-- START PROJECT FEATURES -->
+
+
+                        <br> <br>
+
+                        <div class="container mt-5" id="modalForm">
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" style="opacity: 1;" id="exampleModal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="exampleModalLabel">Demo Form</h4>
+                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+
+                                                    <label>Name:</label>
+                                                    <input type="text" class="form-control" placeholder="User Name">
+                                                    <br>
+                                                    <label>Email:</label>
+                                                    <input type="password" class="form-control"
+                                                        placeholder="Enter Your Email"><br>
+                                                    <label>Mobile No:</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Enter You Number">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <!-- <button type="button" class="btn btn-success">Login</button> -->
+                                            <button type="button" class="black-btn"
+                                                style="padding: 10px 50px; border: 5px; "
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <br> <br>
+                <!-- START PROJECT IMAGES -->
+
+
+                <!-- END PROJECT IMAGES -->
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <section class="sec-space">
+        <div class="container"
+            style="border: 1px solid rgb(212, 212, 212); width: 85%; padding: 30px 10px; border-radius: 30px;">
+            <div class="section-title">
+                <h2 class="title-color">Construction Plans</h2>
+                <h1>Construction Plans</h1>
+            </div>
+            <br><br><br>
+            <div class="row">
+
+                <!-- <div class="col-md-12">
+                                    <div class="main-heading">
+                                        <h4>what-we-do</h4>
+                                        <h1>services</h1>
+                                        <span>who try to belittle your ambitions Small people always do that but the really
+                                            great.</span>
+                                    </div>
+                                </div> -->
+
+
+                <div class="clear"></div>
+                <div class="what-we-do">
+                    <div id="tabbed-nav">
+                        <ul>
+                            <li><a>HOME CONSTRUCTION</a></li>
+                            <li><a>BUILDING REMODELS</a></li>
+                            <li><a>EXTERIOR DESIGN
+                                </a></li>
+                            <li><a>SAFETY MANAGEMENT
+                                </a></li>
+                            <!-- <li><a>Complete</a></li> -->
+                        </ul>
+
+
+                        <div>
+
+                            <div>
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="welcome-serv-img">
+                                            <img src="images/services-img1.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div class="detail">
+                                            <p><span class="big-text">W</span>e build your custom home, on time
+                                                and on budget, with quality craftsmanship.</p>
+                                            <!-- <a href="work.html" class="read-more-btn">Read More</a> -->
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="welcome-serv-img">
+                                            <img src="images/services-img2.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div class="detail">
+                                            <p><span class="big-text">W</span>e transform your space to meet
+                                                your changing needs and budget.
+
+                                            </p>
+                                            <!-- <a href="work.html" class="read-more-btn">Read More</a> -->
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="welcome-serv-img">
+                                            <img src="images/services-img3.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div class="detail">
+                                            <p><span class="big-text">E</span>xterior design that enhances the
+                                                beauty and functionality of your building.</p>
+                                            <!-- <a href="work.html" class="read-more-btn">Read More</a> -->
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="welcome-serv-img">
+                                            <img src="images/services-img4.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div class="detail">
+                                            <p><span class="big-text">S</span>afety management is our top
+                                                priority, ensuring a safe and healthy work environment for all.
+                                            </p>
+                                            <!-- <a href="work.html" class="read-more-btn">Read More</a> -->
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <!-- <div>
+            
+                                        <div class="row">
+            
+                                            <div class="col-md-6">
+                                                <div class="welcome-serv-img">
+                                                    <img src="images/services-img5.jpg" alt="">
+                                                </div>
+                                            </div>
+            
+                                            <div class="col-md-6">
+            
+                                                <div class="detail">
+                                                    <p><span class="big-text">K</span>eep away from people who try to belittle your ambitions Small people always do that but the really great. Friendly neighbour there that power. Architecture Theme Keep away
+                                                        from people who try to belittle your ambitions Small people always do that but the really great. <br/><br/> who try to belittle your ambitions Small people always do that but the really great. Architecture
+                                                        Theme Friendly neighbour there that power.</p>
+                                                    <a href="work.html" class="read-more-btn">Read More</a>
+            
+                                                </div>
+            
+                                            </div>
+            
+                                        </div>
+            
+            
+                                    </div> -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <div class="container"
+        style="margin-top: 30px; border: 1px solid rgb(212, 212, 212) ; padding: 30px 10px; width: 85%; margin-bottom: 2rem; border-radius:20px">
+        <div class="row" style="margin-left: 0px; margin-right: 0px;">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2 class="title-color">Amenities</h2>
+                    <h1>Amenities</h1>
+                </div>
+                <div class="row amenities_card" style="margin-top: 3rem; text-align: center;">
+                    <div class="col-lg-4 col-md-4 col-xs-6" id="one">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/16.png">
+
+                            </div>
+                            <div class="card-body">
+                                <p>Water Bodies</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6" id="one">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/17.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Indoor Games</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 " id="one">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/18.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Toddler Room</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/19.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Telescop Stargazing</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/20.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Informal Sitout</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/21.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Gym</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/22.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Yoga Decks</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/23.png">
+                            </div>
+                            <div class="card-body">
+                                <p>EV Charging Point</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 ">
+                        <div class="inside-card">
+                            <div class="card-header">
+                                <img src="./images/images/icons/aaryavan/24.png">
+                            </div>
+                            <div class="card-body">
+                                <p>Library</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button class="more-aminities load-more">More Aminities</button>
+                    <!-- Button trigger modal -->
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- </section> -->
+    <!-- END PROJECT DETAIL -->
+
+    <section style="padding: 100px 0px;">
+        <div class="container"
+            style="border: 1px solid rgb(212, 212, 212); width: 85%; padding: 30px 10px; border-radius: 30px;">
+            <div class="section-title">
+                <h2 class="title-color">Location</h2>
+                <h1>Location</h1>
+            </div>
+            <br><br>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14658.49143892041!2d72.5373822!3d23.2931496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2fe07b8f30c7%3A0x49bfd80f8c175b23!2sAaryavan!5e0!3m2!1sen!2sin!4v1702900987350!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!--  -->
+    <!-- START FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="container">
+
+            <div class="footer-detail">
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="footer-sec">
+                            <h3>LET’S TALK</h3>
+                            <span>+91 7874608282 <br />aaryaneevdevelopers@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="footer-sec">
+                            <h3>find us</h3>
+                            <span>205, ABHIRAJ COMPLEX, 68B SWASTIK SOCIETY, NAVRANGPURA,
+                                Ahmedabad, Gujarat, 380009</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="footer-sec">
+                            <h3>FOLLOW US</h3>
+                            <div class="social-icons">
+                                <a href="#." class="fb"><i class="icon-facebook-1"></i></a>
+                                <a href="#." class="tw"><i class="icon-twitter-1"></i></a>
+                                <a href="https://instagram.com/aaryaneev.developer?igshid=MzRlODBiNWFlZA=="
+                                    target="_Aaryneev" class="gp"><i class="icon-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyrights">
+                <div class="container">
+                    <p>Copyright © 2023 Outlead Solutions. All rights reserved</p>
+                    <!-- <span>Design by: <a href="#.">Brighthemes</a></span> -->
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- END FOOTER -->
+
+
+
+    <!--       back to top button -->
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+    <!--       back to top button -->
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- Sticky Header -->
+    <script type="text/javascript" src="js/sticky-header.js"></script>
+
+    <!-- SMOOTH SCROLL -->
+    <!-- <script type="text/javascript" src="js/scroll-desktop-smooth.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Custom Menu -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- START REVOLUTION SLIDER -->
+    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+
+    <!-- SERVICES Tabs -->
+    <script type="text/javascript" src="js/tabs.js"></script>
+
+    <!-- OWL CAROUSEL -->
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+
+    <!-- FANCYBOX -->
+    <script type="text/javascript" src="js/fancybox.js"></script>
+
+    <!-- CUSTOM -->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script></script>
+    <script type="text/javascript">
+
+        $(function () {
+            // Show the first 3 items by default
+            $(".col-md-4").slice(0, 3).slideDown();
+
+            // Set up the click/touchstart event
+            $("body").on('click touchstart', '.load-more', function (e) {
+                e.preventDefault();
+                // Show the next 3 hidden items on each click
+                $(".col-md-4:hidden").slice(0, 3).slideDown();
+
+                // If no more hidden items, hide the "load-more" button
+                if ($(".col-md-4:hidden").length == 0) {
+                    $(".load-more").css('visibility', 'hidden');
+                }
+
+                // Optional: Scroll to the top of the newly shown items
+                // $('html,body').animate({
+                //     scrollTop: $(this).offset().top
+                // }, 500);
+            });
+        });
+        $(document).ready(function () {
+
+
+            /*
+             *  Button helper. Disable animations, hide close button, change title type and content
+             */
+
+            $('.fancybox-buttons').fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+
+                prevEffect: 'none',
+                nextEffect: 'none',
+
+                closeBtn: false,
+
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    buttons: {}
+                },
+
+                afterLoad: function () {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+
+
+
+        }); $(window).scroll(function () {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function () {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop: 0                       // Scroll to top of body
+            }, 500);
+        });
+
+        $(document).ready(function () {
+            // Toggle sub-menu visibility on mobile click
+            $('.cd-primary-nav li').click(function (e) {
+                // Check if the clicked li has a dropdown-menu
+                if ($(this).find('.dropdown-menu').length > 0) {
+                    // Prevent the default link behavior
+                    e.preventDefault();
+
+                    // Toggle the visibility of the dropdown-menu
+                    $(this).find('.dropdown-menu').toggle();
+
+                    // Hide other open dropdowns
+                    $('.cd-primary-nav li').not(this).find('.dropdown-menu').hide();
+                }
+            });
+
+            // Close dropdowns when clicking outside of them
+            $(document).click(function (e) {
+                if (!$(e.target).closest('.cd-primary-nav li').length) {
+                    $('.cd-primary-nav .dropdown-menu').hide();
+                }
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
