@@ -37,8 +37,7 @@
 
     <!--switcher-->
     <link href="css/switcher.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <style>
         .our-studio span {
             font-size: 16px;
@@ -326,7 +325,7 @@
                         <!-- <li class="cd-label">Custom Menu</li> -->
 
                         <li class="select"><a href="index.html">Home</a></li>
-                        <li >
+                        <li>
                             <a>Projects</a>
                             <!-- Dropdown menu for Projects -->
                             <ul class="dropdown-menu">
@@ -370,7 +369,7 @@
 
                                     <ul>
                                         <li class="select"><a href="index.html">home</a></li>
-                                        <li >
+                                        <li>
                                             <a>Projects</a>
                                             <!-- Dropdown menu for Projects -->
                                             <ul class="dropdown-menu">
@@ -416,7 +415,7 @@
                                 <div class="navigation">
 
                                     <ul>
-                                        <li  class="select"><a href="index.html">home</a></li>
+                                        <li class="select"><a href="index.html">home</a></li>
                                         <li>
                                             <a>Projects</a>
                                             <!-- Dropdown menu for Projects -->
@@ -461,7 +460,7 @@
                             <div class="navigation">
                                 <ul>
                                     <li class="select"><a href="#.">home</a></li>
-                                    <li >
+                                    <li>
                                         <a>Projects</a>
                                         <!-- Dropdown menu for Projects -->
                                         <ul class="dropdown-menu">
@@ -496,7 +495,7 @@
                 <ul class="cd-primary-nav">
                     <!-- <li class="cd-label">Custom Menu</li> -->
 
-                    <li  class="select"><a href="index.html">Home</a></li>
+                    <li class="select"><a href="index.html">Home</a></li>
                     <li>
                         <a>Projects</a>
                         <!-- Dropdown menu for Projects -->
@@ -524,7 +523,7 @@
         </div>
 
 
-        
+
 
     </div>
 
@@ -552,8 +551,7 @@
                     <!-- <button>See More</button> -->
                 </div>
             </div>
-            <div class="item"
-                style="background-image: url(./images/images/aaryavan/AARYAVAN\ Courtyard.jpg);">
+            <div class="item" style="background-image: url(./images/images/aaryavan/AARYAVAN\ Courtyard.jpg);">
                 <div class="content">
                     <div class="name">Your Choise Simple</div>
                     <div class="des">When Service Matter</div>
@@ -593,7 +591,7 @@
 
         <div class="button">
             <button class="prev"><i class='bx bx-chevrons-left'></i></button>
-            <button class="next"><i class='bx bx-chevrons-right' ></i></button>
+            <button class="next"><i class='bx bx-chevrons-right'></i></button>
         </div>
 
     </div>
@@ -703,7 +701,7 @@
 
                                             <figcaption>
                                                 <h2><img src="images/plus.png" alt=""></h2>
-                                                <a href="./work-detail2.html?content=link2"></a>
+                                                <a href="./Vibgyor.html"></a>
                                             </figcaption>
                                         </figure>
 
@@ -792,6 +790,7 @@
         </section>
         <!-- END OUR STUDIOS -->
         <!-- START OUR STUDIOS -->
+
         <section class="sec-space">
             <div class="container">
 
@@ -1074,7 +1073,8 @@
                             <div class="social-icons">
                                 <a href="#." class="fb"><i class="icon-facebook-1"></i></a>
                                 <a href="#." class="tw"><i class="icon-twitter-1"></i></a>
-                                <a href="https://instagram.com/aaryaneev.developer?igshid=MzRlODBiNWFlZA==" target="_Aaryneev" class="gp"><i class="icon-instagram"></i></a>
+                                <a href="https://instagram.com/aaryaneev.developer?igshid=MzRlODBiNWFlZA=="
+                                    target="_Aaryneev" class="gp"><i class="icon-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1242,6 +1242,29 @@
             $('body,html').animate({
                 scrollTop: 0                       // Scroll to top of body
             }, 500);
+        });
+        $(document).ready(function () {
+            // Toggle sub-menu visibility on mobile click
+            $('.cd-primary-nav li').click(function (e) {
+                // Check if the clicked li has a dropdown-menu
+                if ($(this).find('.dropdown-menu').length > 0) {
+                    // Prevent the default link behavior
+                    e.preventDefault();
+
+                    // Toggle the visibility of the dropdown-menu
+                    $(this).find('.dropdown-menu').toggle();
+
+                    // Hide other open dropdowns
+                    $('.cd-primary-nav li').not(this).find('.dropdown-menu').hide();
+                }
+            });
+
+            // Close dropdowns when clicking outside of them
+            $(document).click(function (e) {
+                if (!$(e.target).closest('.cd-primary-nav li').length) {
+                    $('.cd-primary-nav .dropdown-menu').hide();
+                }
+            });
         });
     </script>
 

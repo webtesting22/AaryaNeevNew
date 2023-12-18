@@ -337,7 +337,7 @@
                         </div>
 
                         <div class="cbp-item ongoing">
-                            <a href="./work-detail2.html?content=link2">
+                            <a href="./Vibgyor.html">
                                 <div class="cbp-caption">
                                     <div class="cbp-caption-defaultWrap">
                                         <div class="work">
@@ -833,6 +833,30 @@
                 scrollTop: 0                       // Scroll to top of body
             }, 500);
         });
+
+        $(document).ready(function() {
+        // Toggle sub-menu visibility on mobile click
+        $('.cd-primary-nav li').click(function(e) {
+            // Check if the clicked li has a dropdown-menu
+            if ($(this).find('.dropdown-menu').length > 0) {
+                // Prevent the default link behavior
+                e.preventDefault();
+                
+                // Toggle the visibility of the dropdown-menu
+                $(this).find('.dropdown-menu').toggle();
+                
+                // Hide other open dropdowns
+                $('.cd-primary-nav li').not(this).find('.dropdown-menu').hide();
+            }
+        });
+
+        // Close dropdowns when clicking outside of them
+        $(document).click(function(e) {
+            if (!$(e.target).closest('.cd-primary-nav li').length) {
+                $('.cd-primary-nav .dropdown-menu').hide();
+            }
+        });
+    });
 </script>
 
 </body>
