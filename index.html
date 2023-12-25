@@ -272,30 +272,23 @@
             border: none;
             cursor: pointer;
             margin: 0 5px;
-            border: 1px solid #c7c7c7;
+            border: 1px solid transparent;
             transition: 0.3s;
+            margin: 0px 25px;
+            background-color: transparent;
         }
 
-        .button button:hover {
+        /* .button button:hover {
             background: #ababab;
             color: #fff;
-        }
+        } */
 
         .header {
             backdrop-filter: blur(400px);
             background-color: transparent;
         }
 
-        .button .prev,
-        .button .next {
-            opacity: 0.5;
-        }
-
-        .button .prev:hover,
-        .button .next:hover {
-            opacity: 1;
-
-        }
+       
     </style>
 </head>
 
@@ -602,8 +595,8 @@
         </div>
 
         <div class="button">
-            <button class="prev"></button>
-            <button class="next"></button>
+            <button class="prev"><img src="./images/slides/arrow-left.png" alt="" style="width: 50px;"></button>
+            <button class="next"><img src="./images/slides/arrow-right.png" alt="" style="width: 50px;"></button>
         </div>
 
     </div>
