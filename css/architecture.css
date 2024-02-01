@@ -1572,3 +1572,59 @@ span.big-text {
     font-size: 18px;
     color: #333;
 }
+.statistics {
+    width: 100%;
+    background: black;
+    background: linear-gradient(
+        90deg,
+        black 0,
+        black 100%
+    );
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    gap: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    /* margin-left: 30px; */
+}
+
+.statistics-card {
+    width: 150px;
+    height: auto;
+    margin: 0px 100px;
+    /* margin-right: 60px; */
+}
+
+.statistics-card > img {
+    /* max-width: 48px; */
+    width: 50%;
+    height: 70px;
+    display: block;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.statistics-card > p {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.statistics-card > h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1470px) {
+    .statistics-container {
+        gap: 80px 200px;
+    }
+}
+

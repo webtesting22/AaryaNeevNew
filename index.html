@@ -39,6 +39,9 @@
     <link href="css/loader.css" rel="stylesheet" type="text/css">
     <!--switcher-->
     <link href="css/switcher.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
         .our-studio span {
             font-size: 16px;
@@ -661,6 +664,32 @@
             </div>
         </section>
         <!-- END OUR STUDIOS -->
+        <div class="statistics" style="padding-top: 25px; padding-bottom: 25px">
+            <div class="limit-container">
+                <div class="statistics-container">
+                    <div class="statistics-card scroll-animate">
+                        <img class="" src="images/worker-1.png" alt="" loading="lazy" />
+                        <!-- <p>Total Bild-up Area</p> -->
+                        <h2 data-count="5.4" additional-data="M+">0+</h2>
+                         <p>Total Build-up Area</p>
+                    </div>
+        
+                    <div class="statistics-card scroll-animate">
+                        <img class="" src="images/home-1.png" alt="" loading="lazy" />
+                        <!-- <p>Care provided by</p> -->
+                        <h2 data-count="20" additional-data="+">0+</h2>
+                        <p>Total Projects</p>
+                    </div>
+        
+                    <div class="statistics-card scroll-animate">
+                        <img class="" src="images/clock-1.png" alt="" loading="lazy" />
+                        <!-- <p>Sending out</p> -->
+                        <h2 data-count="62640" additional-data="+">0+</h2>
+                        <p>Hours of Work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!-- START OUR STUDIOS -->
@@ -1293,6 +1322,49 @@
                 }
             });
         });
+        document.addEventListener("DOMContentLoaded", function () {
+    const elements = Array.from(document.querySelectorAll("h2[data-count]"));
+    const observer = new IntersectionObserver(
+        function (entries) {
+            entries.forEach((entry) => {
+                if (entry.intersectionRatio >= 0.5) {
+                    const index = elements.indexOf(entry.target);
+                    const delay = index * 250;
+                    setTimeout(() => startCounter(entry.target), delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.5
+        }
+    );
+    elements.forEach((element) => observer.observe(element));
+
+    function startCounter(element) {
+        const target = parseInt(element.getAttribute("data-count"));
+        const additionalData = element.getAttribute("additional-data") || "";
+        const totalFrames = 480;
+        let frame = 0;
+
+        function easeOut(t, b, c, d) {
+            return c * ((t = t / d - 1) * t * t + 1) + b;
+        }
+
+        function counter() {
+            if (frame >= totalFrames) {
+                element.textContent = target + additionalData;
+                return;
+            }
+            frame++;
+            const easedValue = easeOut(frame, 0, target, totalFrames);
+            element.textContent = Math.floor(easedValue) + additionalData;
+            requestAnimationFrame(counter);
+        }
+        counter();
+    }
+});
+
     </script>
 
 
