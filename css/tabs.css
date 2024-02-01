@@ -2173,6 +2173,8 @@ ul.z-tabs-nav.z-tabs-desktop {
 }
 
 .z-tabs.silver>ul>li>a:hover {
+    background-color: #93A957
+    ;
     color: #fff;
 }
 

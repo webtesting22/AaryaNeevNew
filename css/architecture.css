@@ -226,6 +226,7 @@ img:hover {
 .header ul li {
     float: left;
     margin: 0 0 0 40px;
+    margin-top: 5px;
 }
 
 .header ul li span {
@@ -404,7 +405,7 @@ a>span:after {
 }
 
 .main-heading h1 {
-    background: url(../images/black-wave.png) no-repeat center 108px;
+    /* background: url(../images/black-wave.png) no-repeat center 108px; */
     padding: 0 0 18px 0;
     margin: -14px 0 0 0;
 }
@@ -670,7 +671,7 @@ span.big-text {
 }
 
 .footer .footer-detail .footer-sec h3 {
-    background: url(../images/white-small-wave.png) no-repeat center bottom;
+    /* background: url(../images/white-small-wave.png) no-repeat center bottom; */
     padding: 0 0 28px 0;
     text-transform: uppercase;
 }
@@ -875,6 +876,7 @@ span.big-text {
 
 .sub-banner .text-detail ul li a {
     color: #0d0d0d;
+    text-decoration: none;
 }
 
 .sub-banner .text-detail ul li.item-select a {
