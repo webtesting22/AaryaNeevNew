@@ -699,6 +699,7 @@ span.big-text {
     font-size: 26px;
     line-height: 60px;
     margin: 0 3px;
+    text-decoration: none;
 }
 
 .footer .footer-detail .footer-sec .social-icons a.fb:hover {
