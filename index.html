@@ -40,8 +40,8 @@
     <!--switcher-->
     <link href="css/switcher.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
         .our-studio span {
             font-size: 16px;
@@ -156,10 +156,10 @@
         .our-studio h1 {
             font-size: 55px;
             text-align: start;
-            opacity: 0.1;
+            opacity: 0.06;
             position: absolute;
             left: -8px;
-            top: -244px;
+            top: -164px;
 
 
         }
@@ -208,10 +208,10 @@
             .our-studio h1 {
                 font-size: 40px;
                 text-align: start;
-                opacity: 0.1;
+                opacity: 0.04;
                 position: absolute;
                 left: -8px;
-                top: -244px;
+                top: -179px;
 
 
             }
@@ -567,7 +567,7 @@
                 <div class="content">
                     <div class="des">34 Years of Excellence In</div>
                     <div class="name">Construction Industry</div>
-                    
+
                     <!-- <button>See More</button> -->
                 </div>
             </div>
@@ -575,7 +575,7 @@
                 <div class="content">
                     <div class="des">When Service Matter</div>
                     <div class="name">Your Choice is Simple</div>
-                    
+
                     <!-- <button>See More</button> -->
                 </div>
             </div>
@@ -642,9 +642,10 @@
                             <i class="icon-noun_301911_cc"></i> -->
                         </div>
                         <div class="row ">
+                            <h4 id="original-text">CREATING&nbsp;LANDMARKS</h4>
+                            <h1>CREATING LANDMARKS <br></h1>
                             <div class="col-lg-6">
-                                <h4 id="original-text">CREATING LANDMARKS</h4>
-                                <h1>CREATING LANDMARKS <br></h1>
+
                                 <span style="font-weight: 800;">SINCE 1989</span>
                                 <span>For the past 30 years, Aaryarath has been in the business of creating
                                     landmarks. It all began with a humble start, gathering funds from family members
@@ -673,16 +674,16 @@
                         <img class="" src="images/worker-1.png" alt="" loading="lazy" />
                         <!-- <p>Total Bild-up Area</p> -->
                         <h2 data-count="5.4" additional-data="M+">0+</h2>
-                         <p>Total Build-up Area</p>
+                        <p>Total Build-up Area</p>
                     </div>
-        
+
                     <div class="statistics-card scroll-animate">
                         <img class="" src="images/home-1.png" alt="" loading="lazy" />
                         <!-- <p>Care provided by</p> -->
                         <h2 data-count="20" additional-data="+">0+</h2>
                         <p>Total Projects</p>
                     </div>
-        
+
                     <div class="statistics-card scroll-animate">
                         <img class="" src="images/clock-1.png" alt="" loading="lazy" />
                         <!-- <p>Sending out</p> -->
@@ -1301,49 +1302,49 @@
                 scrollTop: 0                       // Scroll to top of body
             }, 500);
         });
-        
+
         document.addEventListener("DOMContentLoaded", function () {
-    const elements = Array.from(document.querySelectorAll("h2[data-count]"));
-    const observer = new IntersectionObserver(
-        function (entries) {
-            entries.forEach((entry) => {
-                if (entry.intersectionRatio >= 0.5) {
-                    const index = elements.indexOf(entry.target);
-                    const delay = index * 250;
-                    setTimeout(() => startCounter(entry.target), delay);
-                    observer.unobserve(entry.target);
+            const elements = Array.from(document.querySelectorAll("h2[data-count]"));
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach((entry) => {
+                        if (entry.intersectionRatio >= 0.5) {
+                            const index = elements.indexOf(entry.target);
+                            const delay = index * 250;
+                            setTimeout(() => startCounter(entry.target), delay);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.5
                 }
-            });
-        },
-        {
-            threshold: 0.5
-        }
-    );
-    elements.forEach((element) => observer.observe(element));
+            );
+            elements.forEach((element) => observer.observe(element));
 
-    function startCounter(element) {
-        const target = parseInt(element.getAttribute("data-count"));
-        const additionalData = element.getAttribute("additional-data") || "";
-        const totalFrames = 480;
-        let frame = 0;
+            function startCounter(element) {
+                const target = parseInt(element.getAttribute("data-count"));
+                const additionalData = element.getAttribute("additional-data") || "";
+                const totalFrames = 480;
+                let frame = 0;
 
-        function easeOut(t, b, c, d) {
-            return c * ((t = t / d - 1) * t * t + 1) + b;
-        }
+                function easeOut(t, b, c, d) {
+                    return c * ((t = t / d - 1) * t * t + 1) + b;
+                }
 
-        function counter() {
-            if (frame >= totalFrames) {
-                element.textContent = target + additionalData;
-                return;
+                function counter() {
+                    if (frame >= totalFrames) {
+                        element.textContent = target + additionalData;
+                        return;
+                    }
+                    frame++;
+                    const easedValue = easeOut(frame, 0, target, totalFrames);
+                    element.textContent = Math.floor(easedValue) + additionalData;
+                    requestAnimationFrame(counter);
+                }
+                counter();
             }
-            frame++;
-            const easedValue = easeOut(frame, 0, target, totalFrames);
-            element.textContent = Math.floor(easedValue) + additionalData;
-            requestAnimationFrame(counter);
-        }
-        counter();
-    }
-});
+        });
 
     </script>
 
