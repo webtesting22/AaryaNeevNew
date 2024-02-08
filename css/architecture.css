@@ -199,9 +199,9 @@ img:hover {
 }
 
 .header {
-    background: #c3b8a7;
+    background: #181818;
     padding: 18px 15px;
-    border-radius: 50px;
+    border-radius: 5px;
 }
 
 .header .logo {
@@ -315,11 +315,11 @@ a>span:after {
     position: absolute;
     z-index: 100;
     width: 100%;
-    background-color: #c3b8a7;
+    background-color: #181818;
 }
 
 .header-two .header {
-    background: #c3b8a7;
+    background: #181818;
     padding: 20px 0;
 }
 
@@ -393,7 +393,7 @@ a>span:after {
 }
 
 .sec-space {
-    padding: 110px 0;
+    padding-bottom: 60px;
 }
 
 .main-heading {
@@ -439,7 +439,7 @@ a>span:after {
     background: #000;
     color: #fff;
     text-transform: uppercase;
-    border-radius: 40px;
+    border-radius: 5px;
     padding: 20px 65px;
     display: inline-block;
     border: solid 2px #000;
@@ -455,7 +455,7 @@ input[type=submit] {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
-    border-radius: 40px;
+    /* border-radius: 40px; */
     padding: 20px 65px;
     display: inline-block;
     background: #fff;
@@ -658,7 +658,7 @@ span.big-text {
 /*..... FOOTER ......*/
 
 .footer {
-    background: #0c0c0c url(../images/divider-white.png) repeat-x;
+    background: #181818 url(../images/divider-white.png) repeat-x;
 }
 
 .footer .footer-detail {
@@ -693,7 +693,7 @@ span.big-text {
 .footer .footer-detail .footer-sec .social-icons a {
     color: #fff;
     border: solid 1px #262626;
-    border-radius: 30px;
+    border-radius: 5px;
     width: 90px;
     height: 60px;
     display: inline-block;
@@ -1399,7 +1399,7 @@ span.big-text {
 
 .project-detail {
     text-align: center;
-    padding: 75px 0;
+    padding: 50px 0;
     display: inline-block;
     width: 100%;
 }
@@ -1476,7 +1476,7 @@ span.big-text {
     text-decoration: none;
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
-    border-radius: 35px;
+    border-radius: 5px;
     display: none;
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s ease;
@@ -1576,11 +1576,11 @@ span.big-text {
 }
 .statistics {
     width: 100%;
-    background: black;
+    background: #181818;
     background: linear-gradient(
         90deg,
-        black 0,
-        black 100%
+        #181818 0,
+        #181818 100%
     );
 }
 
