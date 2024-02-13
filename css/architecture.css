@@ -964,9 +964,10 @@ span.big-text {
 }
 
 .our-team .team {
+    width: 100%;
     margin: 0 0 55px 0;
     float: left;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 20px;
+    padding: 30px 20px;
 }.our-team .team h5{
     font-size: 18px;
 }
