@@ -3,8 +3,10 @@
 
 <head>
     <title>Aaryaneev</title>
-    <meta name="keywords" content="aaryaneev, construction, builder, construction services, building contractor, residential construction, commercial construction, construction company, construction projects, construction management, construction industry, building design, construction planning, construction services provider, construction experts, construction solutions">
-    <meta name="description" content="aaryaneev construction and building company providing high-quality construction services for residential and commercial projects. Experienced builders specializing in construction management, design, and planning.">
+    <meta name="keywords"
+        content="aaryaneev, construction, builder, construction services, building contractor, residential construction, commercial construction, construction company, construction projects, construction management, construction industry, building design, construction planning, construction services provider, construction experts, construction solutions">
+    <meta name="description"
+        content="aaryaneev construction and building company providing high-quality construction services for residential and commercial projects. Experienced builders specializing in construction management, design, and planning.">
     <meta name="author" content="aaryaneev Construction Company">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -83,14 +85,17 @@
                         <!-- <li class="cd-label">Custom Menu</li> -->
 
                         <li><a href="index.html">Home</a></li>
-                        <li class="select">
-                            <a>Projects</a>
-                            <!-- Dropdown menu for Projects -->
-                            <ul class="dropdown-menu">
-                                <li><a href="residential.html">Residential</a></li>
-                                <li><a href="commercial.html">Commercial</a></li>
-                                <!-- Add more project links as needed -->
-                            </ul>
+                        <li>
+                            <div class="accordion-single js-acc-single">
+                                <div class="accordion-single-item js-acc-item">
+                                    <a class="accordion-single-title js-acc-single-trigger">Projects</a>
+                                    <div class="accordion-single-content">
+                                        <a href="./residential.html" style="font-size: 10px;">Residential</a>
+                                        <a href="./commercial.html" style="font-size: 10px;">Commercial</a>
+                                    </div>
+                                </div>
+
+                            </div><!-- accordion-single -->
                         </li>
                         <li><a href="about.html">About Us</a></li>
                         <!-- <li><a href="news.html">news</a></li> -->
@@ -323,9 +328,8 @@
                                         <div class="work">
                                             <figure class="effect-sadie">
                                                 <div class="image"><img
-                                                    
                                                         src="./images/images/aaryavan/AARYAVAN Garden.jpg"
-                                                        alt="aaryavan-img" width="100%"  ></div>
+                                                        alt="aaryavan-img" width="100%"></div>
                                                 <figcaption>
                                                     <h2><img src="images/plus.png" alt="aaryavan-img"></h2>
                                                 </figcaption>
@@ -763,8 +767,8 @@
                             <div class="footer-sec">
                                 <h3>LET’S TALK</h3>
                                 <span><a href="tel:+91 7777974741" style="color: white;">+91 7777974741</a> <br /><a
-                                    href="mailto:aaryaneevdevelopers@gmail.com"
-                                    style="color: white;">aaryaneevdevelopers@gmail.com</a></span>
+                                        href="mailto:aaryaneevdevelopers@gmail.com"
+                                        style="color: white;">aaryaneevdevelopers@gmail.com</a></span>
                             </div>
                         </div>
 
@@ -854,6 +858,22 @@
     <!-- CUSTOM -->
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
+        const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
+
+        accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
+
+        function toggleAccordion() {
+            const items = document.querySelectorAll('.js-acc-item');
+            const thisItem = this.parentNode;
+
+            items.forEach(item => {
+                if (thisItem == item) {
+                    thisItem.classList.toggle('is-open');
+                    return;
+                }
+                item.classList.remove('is-open');
+            });
+        }
         $(window).scroll(function () {
             if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
                 $('#return-to-top').fadeIn(200);    // Fade in the arrow

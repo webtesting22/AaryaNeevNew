@@ -96,14 +96,26 @@
 
                         <li><a href="index.html">Home</a></li>
                         <li>
+                            <div class="accordion-single js-acc-single">
+                                <div class="accordion-single-item js-acc-item">
+                                    <a class="accordion-single-title js-acc-single-trigger">Projects</a>
+                                    <div class="accordion-single-content">
+                                        <a href="./residential.html" style="font-size: 10px;">Residential</a>
+                                        <a href="./commercial.html" style="font-size: 10px;">Commercial</a>
+                                    </div>
+                                </div>
+
+                            </div><!-- accordion-single -->
+                        </li>
+                        <!-- <li>
                             <a >Projects</a>
-                            <!-- Dropdown menu for Projects -->
+                            Dropdown menu for Projects
                             <ul class="dropdown-menu">
                                 <li><a href="residential.html">Residential</a></li>
                                 <li><a href="commercial.html">Commercial</a></li>
-                                <!-- Add more project links as needed -->
+                                Add more project links as needed
                             </ul>
-                        </li>
+                        </li> -->
                         <li  class="select"><a href="about.html">About Us</a></li>
                         <!-- <li><a href="news.html">news</a></li> -->
                         <li><a href="contact-us.html">contact us</a></li>
@@ -837,6 +849,22 @@
 
 
     <script>
+          const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
+
+accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
+
+function toggleAccordion() {
+    const items = document.querySelectorAll('.js-acc-item');
+    const thisItem = this.parentNode;
+
+    items.forEach(item => {
+        if (thisItem == item) {
+            thisItem.classList.toggle('is-open');
+            return;
+        }
+        item.classList.remove('is-open');
+    });
+}
         jQuery(document).ready(function ($) {
             $('.counter').counterUp({
                 delay: 10,

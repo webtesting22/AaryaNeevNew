@@ -85,14 +85,17 @@
                         <!-- <li class="cd-label">Custom Menu</li> -->
 
                         <li><a href="index.html">Home</a></li>
-                        <li class="select">
-                            <a >Projects</a>
-                            <!-- Dropdown menu for Projects -->
-                            <ul class="dropdown-menu">
-                                <li><a href="residential.html">Residential</a></li>
-                                <li><a href="commercial.html">Commercial</a></li>
-                                <!-- Add more project links as needed -->
-                            </ul>
+                        <li>
+                            <div class="accordion-single js-acc-single">
+                                <div class="accordion-single-item js-acc-item">
+                                    <a class="accordion-single-title js-acc-single-trigger">Projects</a>
+                                    <div class="accordion-single-content">
+                                        <a href="./residential.html" style="font-size: 10px;">Residential</a>
+                                        <a href="./commercial.html" style="font-size: 10px;">Commercial</a>
+                                    </div>
+                                </div>
+
+                            </div><!-- accordion-single -->
                         </li>
                         <li><a href="about.html">About Us</a></li>
                         <!-- <li><a href="news.html">news</a></li> -->
@@ -480,6 +483,22 @@
     <!-- CUSTOM -->
     <script type="text/javascript" src="js/custom.js"></script>
 <script>
+     const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
+
+accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
+
+function toggleAccordion() {
+    const items = document.querySelectorAll('.js-acc-item');
+    const thisItem = this.parentNode;
+
+    items.forEach(item => {
+        if (thisItem == item) {
+            thisItem.classList.toggle('is-open');
+            return;
+        }
+        item.classList.remove('is-open');
+    });
+}
      $(window).scroll(function () {
             if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
                 $('#return-to-top').fadeIn(200);    // Fade in the arrow

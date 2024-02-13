@@ -217,14 +217,13 @@
             }
 
             .our-studio h1 {
-                font-size: 34px;
+                font-size: 31px;
                 text-align: start;
-                opacity: 0.04;
+                opacity: 0.1;
                 position: absolute;
                 left: -8px;
-                top: -179px;
-
-
+                top: -177px;
+                color: black;
             }
 
             #original-text {
@@ -238,7 +237,7 @@
 
             }
 
-            #sinceContent{
+            #sinceContent {
                 top: -80px;
             }
 
@@ -320,6 +319,60 @@
             backdrop-filter: blur(00px);
             background-color: transparent;
         }
+
+        @media (max-width:600px) {
+            #hello {
+                display: none;
+            }
+        }
+
+        .accordion-single {
+            /* border-bottom: 1px solid #efefef; */
+            margin-top: 10px;
+        }
+
+        .accordion-single-title {
+            /* border-top: 1px solid #efefef; */
+            padding: 20px;
+            cursor: pointer;
+            position: relative;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        /* .accordion-single-title::after {
+            content: "";
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transition: all 0.2s ease-in-out;
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-top: solid 2px #999;
+            border-right: solid 2px #999;
+            transform: translateY(-50%) rotate(135deg);
+        } */
+
+        .accordion-single-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease-in-out;
+            background-color: #6e7e40;
+
+        }
+
+        .accordion-single-content p {
+            padding: 20px;
+        }
+
+        .accordion-single-item.is-open .accordion-single-content {
+            max-height: 150px;
+        }
+
+        .accordion-single-item.is-open .accordion-single-title::after {
+            transform: translateY(-50%) rotate(315deg);
+        }
     </style>
 </head>
 
@@ -360,6 +413,19 @@
 
                         <li class="select"><a href="index.html">Home</a></li>
                         <li>
+                            <div class="accordion-single js-acc-single">
+                                <div class="accordion-single-item js-acc-item">
+                                    <a class="accordion-single-title js-acc-single-trigger">Projects</a>
+                                    <div class="accordion-single-content">
+                                        <a href="./residential.html" style="font-size: 10px;">Residential</a>
+                                        <a href="./commercial.html" style="font-size: 10px;">Commercial</a>
+                                    </div>
+                                </div>
+
+                            </div><!-- accordion-single -->
+                        </li>
+                        <li id="hello">
+
                             <a>Projects</a>
                             <!-- Dropdown menu for Projects -->
                             <ul class="dropdown-menu">
@@ -404,7 +470,7 @@
 
                                     <ul>
                                         <li class="select"><a href="index.html">home</a></li>
-                                        <li>
+                                        <li class="hello">
                                             <a>Projects</a>
                                             <!-- Dropdown menu for Projects -->
                                             <ul class="dropdown-menu">
@@ -1206,7 +1272,25 @@
     <script type="text/javascript" src="js/custom.js"></script>
 
     <!-- Revolution Slider -->
-    <script type="text/javascript"> let next = document.querySelector('.next')
+    <script type="text/javascript">
+
+        const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
+
+        accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
+
+        function toggleAccordion() {
+            const items = document.querySelectorAll('.js-acc-item');
+            const thisItem = this.parentNode;
+
+            items.forEach(item => {
+                if (thisItem == item) {
+                    thisItem.classList.toggle('is-open');
+                    return;
+                }
+                item.classList.remove('is-open');
+            });
+        }
+        let next = document.querySelector('.next')
         let prev = document.querySelector('.prev')
 
         next.addEventListener('click', function () {
