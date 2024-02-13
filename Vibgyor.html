@@ -407,7 +407,8 @@
                 width: 90%;
                 margin: 32% auto;
             }
-            .projectDetailForMobile{
+
+            .projectDetailForMobile {
                 text-align: justify;
             }
         }
@@ -451,14 +452,17 @@
                         <!-- <li class="cd-label">Custom Menu</li> -->
 
                         <li><a href="index.html">Home</a></li>
-                        <li class="select">
-                            <a>Projects</a>
-                            <!-- Dropdown menu for Projects -->
-                            <ul class="dropdown-menu">
-                                <li><a href="residential.html">Residential</a></li>
-                                <li><a href="commercial.html">Commercial</a></li>
-                                <!-- Add more project links as needed -->
-                            </ul>
+                        <li>
+                            <div class="accordion-single js-acc-single">
+                                <div class="accordion-single-item js-acc-item">
+                                    <a class="accordion-single-title js-acc-single-trigger">Projects</a>
+                                    <div class="accordion-single-content">
+                                        <a href="./residential.html" style="font-size: 10px;">Residential</a>
+                                        <a href="./commercial.html" style="font-size: 10px;">Commercial</a>
+                                    </div>
+                                </div>
+
+                            </div><!-- accordion-single -->
                         </li>
                         <li><a href="about.html">About Us</a></li>
                         <!-- <li><a href="news.html">news</a></li> -->
@@ -754,7 +758,31 @@
 
 
                         <!-- START PROJECT FEATURES -->
+<<<<<<< HEAD
                         
+=======
+                        <div class="container">
+                            <div class="project-detail">
+
+                                <div class="detail-sec">
+                                    <!-- <img src="images/house-icon.png" alt="VIBGYOR-img"> -->
+                                    <div class="text">
+                                        <h3>VIBGYOR - 4BHK LUXURY RESIDENCE</h3>
+                                        <p class="projectDetailForMobile">VIBGYOR is more than just a residential
+                                            project; it represents luxury and
+                                            exclusivity. This development in Ahmedabad offers a luxurious living
+                                            experience with meticulous attention to detail, featuring Italian marble
+                                            flooring, advanced home automation, and more. With only 14 homes available,
+                                            VIBGYOR is an ultra-exclusive enclave for those who appreciate the finest
+                                            things in life and seek an unparalleled level of opulence and sophistication
+                                            in their lifestyle.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+>>>>>>> 786b32498528b26c644bdda09ebd1fb612e3d07f
 
                         <!-- <br> <br> -->
 
@@ -1295,9 +1323,15 @@
                     <div class="col-md-4">
                         <div class="footer-sec">
                             <h3>LET’S TALK</h3>
+<<<<<<< HEAD
                             <span><a href="tel:+91 7777974741" style="color: white; text-decoration: none;">+91 7777974741</a> <br /><a
                                 href="mailto:aaryarathdevelopers@gmail.com"
                                 style="color: white; text-decoration: none;">aaryarathdevelopers@gmail.com</a></span>
+=======
+                            <span><a href="tel:+91 7777974741" style="color: white;">+91 7777974741</a> <br /><a
+                                    href="mailto:aaryaneevdevelopers@gmail.com"
+                                    style="color: white;">aaryaneevdevelopers@gmail.com</a></span>
+>>>>>>> 786b32498528b26c644bdda09ebd1fb612e3d07f
                         </div>
                     </div>
 
@@ -1388,6 +1422,23 @@
 
     <script></script>
     <script type="text/javascript">
+
+        const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
+
+        accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
+
+        function toggleAccordion() {
+            const items = document.querySelectorAll('.js-acc-item');
+            const thisItem = this.parentNode;
+
+            items.forEach(item => {
+                if (thisItem == item) {
+                    thisItem.classList.toggle('is-open');
+                    return;
+                }
+                item.classList.remove('is-open');
+            });
+        }
         const galleryItem = document.getElementsByClassName("gallery-item");
         const lightBoxContainer = document.createElement("div");
         const lightBoxContent = document.createElement("div");
