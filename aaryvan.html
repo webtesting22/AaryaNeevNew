@@ -739,13 +739,7 @@
                                 </div>
 
                             </div> -->
-                            <div class="view-all" style="margin-top: 50px;">
-                                <a class="black-btn"
-                                    style="cursor: pointer; margin-bottom: 30px; text-decoration: none;"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Download Brochure</a>
-                                <a class="black-btn" style=" text-decoration: none;" href="tel:+91 7874608282">Contact
-                                    Us</a>
-                            </div>
+                           
                         </div>
 
                         <br> <br>
@@ -757,45 +751,40 @@
 
                         <div class="container mt-5" id="modalForm">
 
-
                             <!-- Modal -->
-                            <div class="modal fade" style="opacity: 1;" id="exampleModal" tabindex="-1"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" style="opacity: 1;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h4 class="modal-title" id="exampleModalLabel">Demo Form</h4>
-                                            <button type="button" class="close" data-bs-dismiss="modal"
-                                                aria-label="Close">
+                                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form>
+                                            <form id="demoForm">
                                                 <div class="form-group">
-
                                                     <label>Name:</label>
-                                                    <input type="text" class="form-control" placeholder="User Name">
+                                                    <input type="text" class="form-control" id="name" placeholder="User Name">
                                                     <br>
                                                     <label>Email:</label>
-                                                    <input type="password" class="form-control"
-                                                        placeholder="Enter Your Email"><br>
+                                                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email"><br>
                                                     <label>Mobile No:</label>
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Enter You Number">
+                                                    <input type="text" class="form-control" id="mobile" placeholder="Enter Your Number">
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="black-btn" onclick="submitForm()"
+                                                            style="padding: 10px 50px; border: 5px;">Submit</button>
+                                                        <button type="button" class="black-btn" style="padding: 10px 50px; border: 5px;"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                    </div>
                                                 </div>
                                             </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <!-- <button type="button" class="btn btn-success">Login</button> -->
-                                            <button type="button" class="black-btn"
-                                                style="padding: 10px 50px; border: 5px; "
-                                                data-bs-dismiss="modal">Close</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                        
                         </div>
 
 
@@ -1156,6 +1145,13 @@
 
         </div>
     </section>
+    <div class="view-all" style="margin-top: 50px;">
+        <a class="black-btn"
+            style="cursor: pointer; margin-bottom: 30px; text-decoration: none;"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">Download Brochure</a>
+        <a class="black-btn" style=" text-decoration: none;" href="tel:+91 7874608282">Contact
+            Us</a>
+    </div>
 
 
 
@@ -1429,6 +1425,31 @@ function toggleAccordion() {
                 }
             });
         });
+        function submitForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var mobile = document.getElementById('mobile').value;
+
+        // Validate if all fields are filled
+        if (name && email && mobile) {
+            // You can trigger the brochure download here
+            // For example, create a link and click it programmatically
+            var downloadLink = document.createElement('a');
+            downloadLink.href = 'images/Aaryavan brochure .pdf';
+            downloadLink.download = 'brochure.pdf';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+
+            // You can also submit the form to a server here if needed
+            document.getElementById('demoForm').submit();
+
+            // Optionally, close the modal after submission
+            $('#exampleModal').modal('hide');
+        } else {
+            alert('Please fill in all fields before submitting.');
+        }
+    }
 
     </script>
 
