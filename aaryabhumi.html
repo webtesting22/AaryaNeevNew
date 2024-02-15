@@ -39,7 +39,7 @@
 
     <!-- Project Mouse hover -->
     <link href="css/fancybox.css" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!--PreLoader-->
     <link href="css/loader.css" rel="stylesheet" type="text/css">
 
@@ -165,7 +165,7 @@
         .section-title h1 {
             position: absolute;
             font-size: 80px;
-            margin-left: -23px;
+            margin-left: 0px;
             margin-top: -81px;
             opacity: 0.04;
             font-weight: 700;
@@ -175,7 +175,7 @@
             .section-title h1 {
                 position: absolute;
                 font-size: 40px;
-                margin-left: -23px;
+                margin-left: -10px;
                 margin-top: -81px;
                 opacity: 0.04;
                 font-weight: 700;
@@ -290,6 +290,128 @@
             border-left: none;
             border-bottom: 1px solid #e7a82099;
         }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+            /* width: 80%; */
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .gallery-item {
+            flex-basis: 32.7%;
+            margin-bottom: 6px;
+            opacity: .85;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            opacity: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-content {
+            font-size: .8em;
+        }
+
+        .lightbox {
+            position: fixed;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            top: 0;
+            left: 0;
+        }
+
+        .lightbox-content {
+            position: relative;
+            width: 58%;
+            /* height: 70%; */
+            margin: 6% auto;
+        }
+
+
+        .lightbox-content img {
+            border-radius: 7px;
+            box-shadow: 0 0 3px 0 rgba(225, 225, 225, .25);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 7px;
+            top: 45%;
+            cursor: pointer;
+        }
+
+        .lightbox-prev {
+            left: 0;
+        }
+
+        .lightbox-next {
+            right: 0;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            opacity: .8;
+        }
+
+        @media (max-width: 767px) {
+            .gallery-container {
+                width: 100%;
+            }
+
+            .gallery-item {
+                flex-basis: 49.80%;
+                margin-bottom: 3px;
+            }
+
+            .lightbox-content {
+                width: 80%;
+                height: 60%;
+                margin: 15% auto;
+            }
+
+            .gallery-heading {
+
+                padding: 0px 29px;
+                margin-top: 50px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex-basis: 100%;
+                margin-bottom: 1px;
+            }
+
+            .lightbox-content {
+                width: 90%;
+                margin: 32% auto;
+            }
+
+            .projectDetailForMobile {
+                text-align: justify;
+            }
+        }
     </style>
 
 </head>
@@ -304,7 +426,7 @@
 
         <!--Start PreLoader-->
         <div id="loader-wrapper">
-            <div id="loader"><img src="./images/img/White.gif" alt="Aaryaneev"></div>
+            <div id="loader"><img src="./images/img/White.gif" alt="aaryaneev_logo"></div>
             <!--/#loader-->
             <div class="loader-section section-left"></div>
             <!--/#loader-section section-left-->
@@ -370,7 +492,7 @@
 
                                 <div class="logo">
                                     <a href="index.html"><img src="./images/img/Aaryaneev Post (8).png"
-                                            style="width: 66%;" alt="Aaryaneev"></a>
+                                            style="width: 66%;" alt="aaryaneev_logo"></a>
                                 </div>
 
                                 <div class="navigation">
@@ -381,8 +503,10 @@
                                             <a href="">Projects</a>
                                             <!-- Dropdown menu for Projects -->
                                             <ul class="dropdown-menu">
-                                                <li style="margin: 0; color: black;"><a href="residential.html">Residential</a></li>
-                                                <li style="margin: 0; color: black;"><a href="commercial.html">Commercial</a></li>
+                                                <li style="margin: 0; color: black;"><a
+                                                        href="residential.html">Residential</a></li>
+                                                <li style="margin: 0; color: black;"><a
+                                                        href="commercial.html">Commercial</a></li>
                                                 <!-- Add more project links as needed -->
                                             </ul>
                                         </li>
@@ -417,7 +541,7 @@
 
                                 <div class="logo">
                                     <a href="index.html"><img src="./images/img/Aaryaneev Post (8).png"
-                                            style="width: 35%;" alt="Aaryaneev"></a>
+                                            style="width: 35%;" alt="aaryaneev_logo"></a>
                                 </div>
 
                                 <div class="navigation">
@@ -428,8 +552,10 @@
                                             <a>Projects</a>
                                             <!-- Dropdown menu for Projects -->
                                             <ul class="dropdown-menu">
-                                                <li style="margin: 0; color: black;"><a href="residential.html">Residential</a></li>
-                                                <li style="margin: 0; color: black;"><a href="commercial.html">Commercial</a></li>
+                                                <li style="margin: 0; color: black;"><a
+                                                        href="residential.html">Residential</a></li>
+                                                <li style="margin: 0; color: black;"><a
+                                                        href="commercial.html">Commercial</a></li>
                                                 <!-- Add more project links as needed -->
                                             </ul>
                                         </li>
@@ -463,7 +589,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="logo">
-                                <a href="index.html"><img src="./images/img/Aaryaneev_logo.png" alt="Aaryaneev"></a>
+                                <a href="index.html"><img src="./images/img/Aaryaneev_logo.png"
+                                        alt="aaryaneev_logo"></a>
                             </div>
                             <div class="navigation">
                                 <ul>
@@ -472,8 +599,10 @@
                                         <a>Projects</a>
                                         <!-- Dropdown menu for Projects -->
                                         <ul class="dropdown-menu">
-                                            <li style="margin: 0; color: black;"><a href="residential.html">Residential</a></li>
-                                            <li style="margin: 0; color: black;"><a href="commercial.html">Commercial</a></li>
+                                            <li style="margin: 0; color: black;"><a
+                                                    href="residential.html">Residential</a></li>
+                                            <li style="margin: 0; color: black;"><a
+                                                    href="commercial.html">Commercial</a></li>
                                             <!-- Add more project links as needed -->
                                         </ul>
                                     </li>
@@ -530,19 +659,14 @@
 
         </div>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <a href="https://api.whatsapp.com/send?phone=7777974741 &text=Hello I want to inquire about-" class="float"
-            target="_blank">
-            <i class="fa fa-whatsapp my-float"></i>
-        </a>
+
 
         <!-- START SUB-BANNER -->
         <div class="sub-banner">
             <div class="container">
                 <div class="text-detail">
-
-
-                    <!-- <p>"Crafting Dreams, Building Realities: Where Precision Meets Passion in Every Construction
+                    <!-- <h2 style="font-weight: bold;">work detail</h2>
+                    <p>"Crafting Dreams, Building Realities: Where Precision Meets Passion in Every Construction
                         Project."</p> -->
                     <ul>
                         <li><a href="index.html">Home</a> <span>/</span></li>
@@ -561,38 +685,47 @@
             </div>
         </div>
         <!-- END SUB-BANNER -->
-        <div class="container">
-            <div class="project-detail">
 
-                <div class="detail-sec">
-                    <!-- <img src="images/house-icon.png" alt="VIBGYOR-img"> -->
-                    <div class="text">
-                        <h3>AARYABHUMI</h3>
-                        <p class="projectDetailForMobile">A dome of happiness wrapped in an extravagant lifestyle.
-                            That's not just a dream anymore. Aaryabhumi is created above lush living and designed to
-                            give you the blissful life you always dreamt of. Aaryabhumi's amazing architectural elegance
-                            will rightfully take its place as a timeless landmark in Ahmedabad. It is going to be an
-                            iconic space, in an already classy location of Jodhpur Crossroad.
-                            Privileged living is here!</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=777797474 1 &text=Hello I want to inquire about-" class="float"
+            target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
 
         <!-- START CONTENT -->
 
         <!-- END CONTENT -->
-        <div class="sub-content">
+        <div class="sub-content" style="margin: 34px 0 0 0;">
 
             <!-- START PROJECT DETAIL -->
             <section>
 
                 <div class="row" style="width:100%; margin:0px 0px;">
                     <div class="col-md-12" style="padding:0px;">
-
                         <div class="container" style="padding:0px;">
+                            <div class="container">
+                                <div class="project-detail">
+                                    <div class="detail-sec">
+                                        <div class="text">
+                                            <h3>AARYABHUMI</h3>
+                                            <p class="projectDetailForMobile">A dome of happiness wrapped in an
+                                                extravagant lifestyle.
+                                                That's not just a dream anymore. Aaryabhumi is created above lush living
+                                                and designed to
+                                                give you the blissful life you always dreamt of. Aaryabhumi's amazing
+                                                architectural elegance
+                                                will rightfully take its place as a timeless landmark in Ahmedabad. It
+                                                is going to be an
+                                                iconic space, in an already classy location of Jodhpur Crossroad.
+                                                Privileged living is here!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="project-img"><img src="./images/images/vibgyor/main1.jpg" alt="VIBGYOR-img"></div>
+
+                            <!-- START PROJECT FEATURES -->
                             <div class="project-features">
 
                                 <div class="feature-sec">
@@ -630,57 +763,56 @@
                                 </div>
 
                             </div>
-
                         </div>
                         <!-- END PROJECT FEATURES -->
 
 
 
                         <!-- START PROJECT FEATURES -->
-                        <div class="container">
-                            <!-- <div class="project-detail">
+
+
+
+                        <!-- <div class="container">
+                            <div class="project-detail">
 
                                 <div class="detail-sec">
-                                    <img src="images/house-icon.png" alt="">
+                                   
                                     <div class="text">
-                                        <h3>AARYABHUMI</h3>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the
-                                            majority have suffered alteration in some form, by injected humour, or
-                                            randomised words which don't look even slightly believable. If you are
-                                            going to use a passage of Lorem Ipsum, you need to be sure there isn't
-                                            anything embarrassing hidden in the middle of text All the Lorem Ipsum
-                                            generators on the Internet. slightly believable If you are going
-                                            to use a passage.</p>
+                                        <h3>VIBGYOR - 4BHK LUXURY RESIDENCE</h3>
+                                        <p class="projectDetailForMobile">VIBGYOR is more than just a residential
+                                            project; it represents luxury and
+                                            exclusivity. This development in Ahmedabad offers a luxurious living
+                                            experience with meticulous attention to detail, featuring Italian marble
+                                            flooring, advanced home automation, and more. With only 14 homes available,
+                                            VIBGYOR is an ultra-exclusive enclave for those who appreciate the finest
+                                            things in life and seek an unparalleled level of opulence and sophistication
+                                            in their lifestyle.</p>
                                     </div>
                                 </div>
 
-                            </div> -->
-                            <!-- <div class="view-all" style="margin-top: 50px;">
-                                <a class="black-btn"
-                                    style="cursor: pointer; margin-bottom: 30px; text-decoration: none;"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Download Brochure</a>
-                                <a class="black-btn" style=" text-decoration: none;" href="tel:+91 7874608282">Contact
-                                    Us</a>
-                            </div> -->
-                        </div>
+                            </div>
 
-                        <br> <br>
+                        </div> -->
+
+
+                        <!-- <br> <br> -->
 
                         <!-- START PROJECT FEATURES -->
 
 
-                        <br> <br>
+                        <!-- <br> <br> -->
 
                         <div class="container mt-5" id="modalForm">
 
                             <!-- Modal -->
-                            <div class="modal fade" style="opacity: 1;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
+                            <div class="modal fade" style="opacity: 1;" id="exampleModal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title" id="exampleModalLabel">Demo Form</h4>
-                                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                            <h4 class="modal-title" id="exampleModalLabel">Fill This Form To Download Brochure</h4>
+                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
@@ -688,16 +820,20 @@
                                             <form id="demoForm">
                                                 <div class="form-group">
                                                     <label>Name:</label>
-                                                    <input type="text" class="form-control" id="name" placeholder="User Name">
+                                                    <input type="text" class="form-control" id="name"
+                                                        placeholder="User Name">
                                                     <br>
                                                     <label>Email:</label>
-                                                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email"><br>
+                                                    <input type="email" class="form-control" id="email"
+                                                        placeholder="Enter Your Email"><br>
                                                     <label>Mobile No:</label>
-                                                    <input type="text" class="form-control" id="mobile" placeholder="Enter Your Number">
+                                                    <input type="text" class="form-control" id="mobile"
+                                                        placeholder="Enter Your Number">
                                                     <div class="modal-footer">
                                                         <button type="button" class="black-btn" onclick="submitForm()"
                                                             style="padding: 10px 50px; border: 5px;">Submit</button>
-                                                        <button type="button" class="black-btn" style="padding: 10px 50px; border: 5px;"
+                                                        <button type="button" class="black-btn"
+                                                            style="padding: 10px 50px; border: 5px;"
                                                             data-bs-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
@@ -706,30 +842,15 @@
                                     </div>
                                 </div>
                             </div>
-                        
+
                         </div>
-                        
-
-
-
-
-
-
-
-
-
-
-
                     </div>
                 </div>
-                <br> <br>
+                <!-- <br> <br> -->
                 <!-- START PROJECT IMAGES -->
 
 
                 <!-- END PROJECT IMAGES -->
-
-
-
 
         </div>
     </div>
@@ -746,18 +867,27 @@
             <br><br><br>
             <div class="row">
 
+                <!-- <div class="col-md-12">
+                                    <div class="main-heading">
+                                        <h4>what-we-do</h4>
+                                        <h1>services</h1>
+                                        <span>who try to belittle your ambitions Small people always do that but the really
+                                            great.</span>
+                                    </div>
+                                </div> -->
 
 
-
-
+                <div class="clear"></div>
                 <div class="what-we-do">
                     <div id="tabbed-nav">
                         <ul>
-                            <li><a>Unit Plan</a></li>
-                            <li><a>Ground Floor Plan</a></li>
-                            <li><a>Typical Plan
+                            <li width="33%"><a>Unit Plan</a></li>
+                            <li width="33%"><a>Ground Floor Plan</a></li>
+                            <li width="34%"><a>Typical Plan
                                 </a></li>
-                            <!-- <li><a>SAFETY MANAGEMENT
+                            <!-- <li><a>PLAN 3
+                                </a></li>
+                            <li><a>PLAN 4
                                 </a></li> -->
                             <!-- <li><a>Complete</a></li> -->
                         </ul>
@@ -769,13 +899,13 @@
 
                                 <div class="row">
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-8">
                                         <div class="welcome-serv-img">
-                                            <img src="images/unit PLAN.png" alt="">
+                                            <img src="images/unit PLAN.png" alt="VIBGYOR-img">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
 
                                         <div class="detail">
                                             <p><span class="big-text">W</span>e build your custom home, on time
@@ -795,13 +925,13 @@
 
                                 <div class="row">
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-8">
                                         <div class="welcome-serv-img">
-                                            <img src="images/Ground plan.png" alt="">
+                                            <img src="images/Ground plan.png" alt="VIBGYOR-img">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
 
                                         <div class="detail">
                                             <p><span class="big-text">W</span>e transform your space to meet
@@ -825,7 +955,7 @@
 
                                     <div class="col-md-6">
                                         <div class="welcome-serv-img">
-                                            <img src="images/typical plan.png" alt="">
+                                            <img src="images/typical plan.png" alt="VIBGYOR-img">
                                         </div>
                                     </div>
 
@@ -851,7 +981,7 @@
 
                                     <div class="col-md-6">
                                         <div class="welcome-serv-img">
-                                            <img src="images/services-img4.jpg" alt="">
+                                            <img src="images/vibgyor tabs/plan 1.png" alt="VIBGYOR-img">
                                         </div>
                                     </div>
 
@@ -861,7 +991,6 @@
                                             <p><span class="big-text">S</span>afety management is our top
                                                 priority, ensuring a safe and healthy work environment for all.
                                             </p>
-                                            
 
                                         </div>
 
@@ -914,214 +1043,280 @@
 
 
 
-    <div class="container"
-        style="margin-top: 30px; border: 1px solid rgb(212, 212, 212) ; padding: 30px 10px; width: 85%; margin-bottom: 2rem; border-radius:20px">
-        <div class="row" style="margin-left: 0px; margin-right: 0px;">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h2 class="title-color">Amenities</h2>
-                    <h1>Amenities</h1>
-                </div>
-                <div class="row amenities_card" style="margin-top: 3rem; text-align: center;">
-                    <div class="col-lg-4 col-md-4 col-xs-6" id="one">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
-                                <img src="./images/images/icons/aaryavan/16.png">
+    <section>
+        <div class="container"
+            style="margin-top: 30px; border: 1px solid rgb(212, 212, 212) ; padding: 30px 10px; width: 85%; margin-bottom: 2rem; border-radius:20px">
+            <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 class="title-color">Amenities</h2>
+                        <h1>Amenities</h1>
+                    </div>
+                    <div class="row amenities_card" style="margin-top: 3rem; text-align: center;">
+                        <div class="col-lg-4 col-md-4 col-xs-6" id="one">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
+                                <img src="./images/images/icons/7.png">
 
                             </div> -->
-                            <div class="card-body">
-                                <p>Multipurpose Court</p>
+                                <div class="card-body">
+                                    <p>Multipurpose Court</p>
 
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6" id="one">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6" id="one">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/17.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Landscape Garden</p>
+                                <div class="card-body">
+                                    <p>Landscape Garden</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 " id="one">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 " id="one">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/18.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Senior Citizen Area</p>
+                                <div class="card-body">
+                                    <p>Senior Citizen Area</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/19.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Children Play Area</p>
+                                <div class="card-body">
+                                    <p>Children Play Area</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/20.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Indoor Games</p>
+                                <div class="card-body">
+                                    <p>Indoor Games</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/20.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Informal Sitout</p>
+                                <div class="card-body">
+                                    <p>Informal Sitout</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/21.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Yoga Deck</p>
+                                <div class="card-body">
+                                    <p>Yoga Deck</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/22.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Fire Saftey</p>
+                                <div class="card-body">
+                                    <p>Fire Saftey</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/23.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Club House</p>
+                                <div class="card-body">
+                                    <p>Club House</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/24.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Alloted Parking</p>
+                                <div class="card-body">
+                                    <p>Alloted Parking</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/24.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Jogging Track</p>
+                                <div class="card-body">
+                                    <p>Jogging Track</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/24.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Gym</p>
+                                <div class="card-body">
+                                    <p>Gym</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/24.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>CCTV Camera</p>
+                                <div class="card-body">
+                                    <p>CCTV Camera</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/24.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Well-Designed Entrance Foyer</p>
+                                <div class="card-body">
+                                    <p>Well-Designed Entrance Foyer</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/24.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>Drop-off Zone</p>
+                                <div class="card-body">
+                                    <p>Drop-off Zone</p>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-6 ">
-                        <div class="inside-card">
-                            <!-- <div class="card-header">
+                        <div class="col-lg-4 col-md-4 col-xs-6 ">
+                            <div class="inside-card">
+                                <!-- <div class="card-header">
                                 <img src="./images/images/icons/aaryavan/24.png">
                             </div> -->
-                            <div class="card-body">
-                                <p>24Hrs Water</p>
+                                <div class="card-body">
+                                    <p>24Hrs Water</p>
 
+                                </div>
                             </div>
                         </div>
+
+
+                        <button class="more-aminities load-more">More Aminities</button>
+                        <!-- Button trigger modal -->
+
+
+
                     </div>
-
-
-                    <button class="more-aminities load-more">More Aminities</button>
-                    <!-- Button trigger modal -->
-
-
-
                 </div>
+
             </div>
 
         </div>
-
-
-
-
-    </div>
+    </section>
 
 
     <!-- </section> -->
     <!-- END PROJECT DETAIL -->
-
+    <section>
+        <div class="container">
+            <div class="section-title gallery-heading">
+                <h2 class="title-color">Gallery</h2>
+                <h1>Gallery</h1>
+            </div>
+            <br><br>
+            <div class="gallery-container">
+                <div class="gallery-item" data-index="1">
+                    <img src="./images/images/vibgyor/gym_area.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="./images/images/vibgyor/gallery2.jpg" alt="VIBGYOR-img">
+                </div>
+                <!-- <div class="gallery-item" data-index="3">
+                    <img src="./images/images/vibgyor/gallery3.jpg" alt="VIBGYOR-img">
+                </div> -->
+                <div class="gallery-item" data-index="3">
+                    <img src="./images/images/home/vibgyor.jpg" alt="VIBGYOR-img">
+                </div>
+                <!-- <div class="gallery-item" data-index="5">
+                    <img src="./images/images/vibgyor/gallery4.jpg" alt="VIBGYOR-img">
+                </div> -->
+                <div class="gallery-item" data-index="4">
+                    <img src="./images/images/vibgyor/gallery5.jpg" alt="VIBGYOR-img">
+                </div>
+                <!-- <div class="gallery-item" data-index="7">
+                    <img src="./images/images/vibgyor/gallery6.jpg" alt="VIBGYOR-img">
+                </div> -->
+                <div class="gallery-item" data-index="5">
+                    <img src="./images/images/vibgyor/gallery7.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="6">
+                    <img src="./images/images/home/homeslider1.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="7">
+                    <img src="./images/images/vibgyor/main.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="8">
+                    <img src="./images/images/vibgyor/gallery8.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="9">
+                    <img src="./images/images/vibgyor/gallery9.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="10">
+                    <img src="./images/images/vibgyor/gallery10.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="11">
+                    <img src="./images/images/vibgyor/gallery11.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="12">
+                    <img src="./images/images/vibgyor/Kitchen_Dining.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="13">
+                    <img src="./images/images/vibgyor/Living_Dining.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="14">
+                    <img src="./images/images/vibgyor/Mr. Harshit Bhai Banquet Hall.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="15">
+                    <img src="./images/images/vibgyor/Mr. Harshit Bhai Game Room Cam 01.jpg" alt="VIBGYOR-img">
+                </div>
+                <div class="gallery-item" data-index="16">
+                    <img src="./images/images/vibgyor/Mr. Harshit Bhai Game Room Cam 02.jpg" alt="VIBGYOR-img">
+                </div>
+            </div>
+        </div>
+    </section>
     <section style="padding: 100px 0px;">
         <div class="container"
             style="border: 1px solid rgb(212, 212, 212); width: 85%; padding: 30px 10px; border-radius: 30px;">
@@ -1131,27 +1326,27 @@
             </div>
             <br><br>
             <div>
+
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14688.768624191649!2d72.5226989!3d23.0167158!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cf8cd68625%3A0xfc4ec94ad1f87fa6!2sAaryabhumi!5e0!3m2!1sen!2sin!4v1702901267351!5m2!1sen!2sin"
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+        </div>
 
     </section>
-    <div class="view-all" >
-        <a class="black-btn"
-            style="cursor: pointer; margin-bottom: 30px; text-decoration: none;"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">Download Brochure</a>
+
+
+
+
+    <br><br>
+    <div class="view-all">
+        <a class="black-btn" style="cursor: pointer; margin-bottom: 30px; text-decoration: none;" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Download Brochure</a>
         <a class="black-btn" style=" text-decoration: none;" href="tel:+91 7874608282">Contact
             Us</a>
     </div>
-
-
-
-
-
-
-
+    <br><br>
     <!--  -->
     <!-- START FOOTER -->
     <footer class="footer" id="footer">
@@ -1163,12 +1358,13 @@
                     <div class="col-md-4">
                         <div class="footer-sec">
                             <h3>LET’S TALK</h3>
-                            <span><a href="tel:+91 7777974741" style="color: white; text-decoration: none;">+91
 
-                                7777974741</a> <br /><a href="mailto:aaryarathdevelopers@gmail.com"
+                            <span><a href="tel:+91 7777974741" style="color: white; text-decoration: none;">+91
+                                    7777974741</a> <br /><a href="mailto:aaryarathdevelopers@gmail.com"
                                     style="color: white; text-decoration: none;">aaryarathdevelopers@gmail.com</a></span>
 
-                                   
+
+
                         </div>
                     </div>
 
@@ -1259,6 +1455,7 @@
 
     <script></script>
     <script type="text/javascript">
+
         const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
 
         accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
@@ -1275,6 +1472,65 @@
                 item.classList.remove('is-open');
             });
         }
+        const galleryItem = document.getElementsByClassName("gallery-item");
+        const lightBoxContainer = document.createElement("div");
+        const lightBoxContent = document.createElement("div");
+        const lightBoxImg = document.createElement("img");
+        const lightBoxPrev = document.createElement("div");
+        const lightBoxNext = document.createElement("div");
+
+        lightBoxContainer.classList.add("lightbox");
+        lightBoxContent.classList.add("lightbox-content");
+        lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
+        lightBoxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
+
+        lightBoxContainer.appendChild(lightBoxContent);
+        lightBoxContent.appendChild(lightBoxImg);
+        lightBoxContent.appendChild(lightBoxPrev);
+        lightBoxContent.appendChild(lightBoxNext);
+
+        document.body.appendChild(lightBoxContainer);
+
+        let index = 1;
+
+        function showLightBox(n) {
+            if (n > galleryItem.length) {
+                index = 1;
+            } else if (n < 1) {
+                index = galleryItem.length;
+            }
+            let imageLocation = galleryItem[index - 1].children[0].getAttribute("src");
+            lightBoxImg.setAttribute("src", imageLocation);
+        }
+
+        function currentImage() {
+            lightBoxContainer.style.display = "block";
+
+            let imageIndex = parseInt(this.getAttribute("data-index"));
+            showLightBox(index = imageIndex);
+        }
+        for (let i = 0; i < galleryItem.length; i++) {
+            galleryItem[i].addEventListener("click", currentImage);
+        }
+
+        function slideImage(n) {
+            showLightBox(index += n);
+        }
+        function prevImage() {
+            slideImage(-1);
+        }
+        function nextImage() {
+            slideImage(1);
+        }
+        lightBoxPrev.addEventListener("click", prevImage);
+        lightBoxNext.addEventListener("click", nextImage);
+
+        function closeLightBox() {
+            if (this === event.target) {
+                lightBoxContainer.style.display = "none";
+            }
+        }
+        lightBoxContainer.addEventListener("click", closeLightBox);
         $(function () {
             // Show the first 3 items by default
             $(".col-md-4").slice(0, 3).slideDown();
@@ -1363,29 +1619,30 @@
             });
         });
         function submitForm() {
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var mobile = document.getElementById('mobile').value;
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var mobile = document.getElementById('mobile').value;
 
-        // Validate if all fields are filled
-        if (name && email && mobile) {
-            // You can trigger the brochure download here
-            // For example, create a link and click it programmatically
-            var downloadLink = document.createElement('a');
-            downloadLink.href = 'images/Aaryabhumi Brochure.pdf';
-            downloadLink.download = 'brochure.pdf';
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
+            // Validate if all fields are filled
+            if (name && email && mobile) {
+                // You can trigger the brochure download here
+                // For example, create a link and click it programmatically
+                var downloadLink = document.createElement('a');
+                downloadLink.href = 'images/Aaryabhumi Brochure.pdf';
+                downloadLink.download = 'brochure.pdf';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
 
-            // You can also submit the form to a server here if needed
-            document.getElementById('demoForm').submit();
+                // You can also submit the form to a server here if needed
+                document.getElementById('demoForm').submit();
 
-            // Optionally, close the modal after submission
-            $('#exampleModal').modal('hide');
-        } else {
-            alert('Please fill in all fields before submitting.');
-        }}
+                // Optionally, close the modal after submission
+                $('#exampleModal').modal('hide');
+            } else {
+                alert('Please fill in all fields before submitting.');
+            }
+        }
 
     </script>
 
