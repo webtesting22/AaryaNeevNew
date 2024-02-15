@@ -99,7 +99,9 @@ ul.z-tabs-nav.z-tabs-desktop.z-hide-menu {
 }
 
 ul.z-tabs-nav.z-tabs-desktop {
-    border: solid 1px #dbdbdb;
+    display: flex;
+    justify-content: center;
+    /* border: solid 1px #dbdbdb; */
     float: left;
     width: 100%;
     margin: 0 0 70px 0;
@@ -2166,7 +2168,7 @@ ul.z-tabs-nav.z-tabs-desktop {
     margin: 0 -1px 0 0;
     width: 25% !important;
     text-align: center;
-    border-right: solid 1px #DBDBDB;
+    border: solid 1px #DBDBDB;
 }
 
 .z-tabs.silver>ul>li>a {
