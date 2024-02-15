@@ -350,10 +350,12 @@
                                 <div class="inquiries">
                                     <h5>Inquiries</h5>
                                     <div class="form">
-                                        <input name=" " placeholder="Enter Your Name" type="text" value="">
-                                        <input name="" type="text" placeholder="Enter Your Email" value="">
-                                        <textarea name="" placeholder="Message"></textarea>
-                                        <input name="" type="submit" value="Submit">
+                                        <form id="myForm">
+                                            <input name="name" placeholder="Enter Your Name" type="text" value="">
+                                            <input name="email" type="text" placeholder="Enter Your Email" value="">
+                                            <textarea name="message" placeholder="Message"></textarea>
+                                            <input type="submit" value="Submit">
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -594,6 +596,18 @@
                 });
             }
         }
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // You can add additional validation here if needed
+
+        // Simulate form submission (you should replace this with actual submission logic)
+        alert("Form submitted!");
+
+        // Reset the form
+        this.reset();
+    });
     </script>
 
 
