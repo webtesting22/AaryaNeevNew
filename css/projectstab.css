@@ -93,13 +93,13 @@ section {
 }
 
 ul.z-tabs-nav.z-tabs-desktop.z-hide-menu {
-    border-bottom: solid 1px #bcbcbc;
+    /* border-bottom: solid 1px #bcbcbc; */
     float: left;
     width: 100%;
 }
 
 ul.z-tabs-nav.z-tabs-desktop {
-    border: solid 1px #dbdbdb;
+    /* border: solid 1px #dbdbdb; */
     float: left;
     width: 100%;
     margin: 0 0 70px 0;
@@ -1873,7 +1873,7 @@ ul.z-tabs-nav.z-tabs-desktop {
 }
 
 .z-tabs.horizontal.responsive>ul.z-tabs-desktop {
-    display: block;
+    display: flex;
     width: 100%;
 }
 

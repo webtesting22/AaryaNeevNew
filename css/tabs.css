@@ -93,19 +93,27 @@ section {
 }
 
 ul.z-tabs-nav.z-tabs-desktop.z-hide-menu {
-    border-bottom: solid 1px #bcbcbc;
+    /* border-bottom: solid 1px #bcbcbc; */
     float: left;
     width: 100%;
 }
 
 ul.z-tabs-nav.z-tabs-desktop {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     /* border: solid 1px #dbdbdb; */
     float: left;
     width: 100%;
     margin: 0 0 70px 0;
 }
+/* #tabsHome ul.z-tabs-nav.z-tabs-desktop {
+    display: flex;
+    justify-content: center;
+    border: solid 1px #dbdbdb;
+    float: left;
+    width: 100%;
+    margin: 0 0 70px 0;
+} */
 
 .z-tabs>.z-container {
     padding: 0;
