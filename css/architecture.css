@@ -1713,3 +1713,22 @@ span.big-text {
 .accordion-single-item.is-open .accordion-single-title::after {
     transform: translateY(-50%) rotate(315deg);
 }
+
+
+/* BlackAndWhiteImage */
+.bwImage{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.spImg{
+    width: 500px;
+    height: auto;
+}
+
+@media (max-width:450px) {
+    .spImg{
+        width: 100%;
+       
+    }
+}
