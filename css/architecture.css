@@ -1733,3 +1733,11 @@ span.big-text {
        
     }
 }
+
+.bgrmTrial{
+    aspect-ratio: 3/2;
+    width: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+}
