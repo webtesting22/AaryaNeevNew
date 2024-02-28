@@ -222,13 +222,13 @@
                 opacity: 0.1;
                 position: absolute;
                 left: -8px;
-                top: -177px;
+                top: -160px;
                 color: black;
             }
 
             #original-text {
                 /* position: absolute; */
-                margin-top: -10rem;
+                margin-top: -9rem;
                 /* font-size: 30px; */
                 /* font-weight: 800; */
                 /* text-align: start; */
@@ -244,6 +244,8 @@
 
 
         }
+
+        
 
         #container .slide .item:nth-child(2) .content {
             display: block;
@@ -372,6 +374,19 @@
 
         .accordion-single-item.is-open .accordion-single-title::after {
             transform: translateY(-50%) rotate(315deg);
+        }
+
+        @media (max-width:450px) {
+            #original-text {
+                font-size: 26px;
+                /* margin-top: -9rem; */
+            }
+            .our-studio h1{
+                font-size: 28px;
+                /* top: -160 !important; */
+            }
+
+            
         }
         
     </style>
