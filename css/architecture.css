@@ -1613,10 +1613,18 @@ span.big-text {
 }
 
 .statistics-card {
-    /* width: 150px; */
+    width: 150px;
     height: auto;
-    /* margin: 0px 100px; */
+    margin: 0px 10px;
     /* margin-right: 60px; */
+}
+
+@media (min-width:1300px) {
+    .statistics-card {
+        width: 150px;
+        height: auto;
+        margin: 0px 100px;
+    }
 }
 
 .statistics-card > img {
