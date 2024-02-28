@@ -1754,3 +1754,7 @@ span.big-text {
     mix-blend-mode: multiply;
     filter: contrast(1);
 }
+
+.projectLogoImg{
+    padding: 15%;
+}
