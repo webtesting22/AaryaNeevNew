@@ -46,6 +46,31 @@
     <!--switcher-->
     <link href="css/switcher.css" rel="stylesheet" type="text/css">
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "iJLjznmO2aq0APv0i",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('myForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
 </head>
 
 <body>
@@ -353,14 +378,49 @@
                             </div>
 
 
+                            <!-- <div class="col-md-5">
+                                <div class="inquiries">
+                                    <h5>Inquiries</h5>
+                                    <div class="form">
+                                        <form id="myForm" onsubmit="return validateForm(event)" novalidate>
+                                            <input id="name" name="name" placeholder="Your Name*" type="text" value="" required>
+                                            <span id="name-error" class="error-message"></span>
+                                            <input id="contact" name="contact" type="text" placeholder="Your Contact Number*" value="" required>
+                                            <span id="contact-error" class="error-message"></span>
+                                            <input id="email" name="email" type="text" placeholder="Your Email" value="">
+                                            <span id="email-error" class="error-message"></span>
+                                            <textarea id="message" name="message" placeholder="Message"></textarea>
+                                            <span id="message-error" class="error-message"></span>
+                                            <input type="submit" value="Submit">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div> -->
+
                             <div class="col-md-5">
                                 <div class="inquiries">
                                     <h5>Inquiries</h5>
                                     <div class="form">
-                                        <form id="myForm">
-                                            <input name="name" placeholder="Enter Your Name" type="text" value="">
-                                            <input name="email" type="text" placeholder="Enter Your Email" value="">
-                                            <textarea name="message" placeholder="Message"></textarea>
+                                        <form id="myForm" onsubmit="return validateForm(event)" novalidate>
+                                            <div class="formInput">
+                                                <input id="name" name="name" placeholder="Your Name*" type="text"
+                                                    value="" required>
+                                                <span id="name-error" class="error-message"></span>
+                                            </div>
+                                            <div class="formInput"><input id="contact" name="contact" type="text"
+                                                    placeholder="Your Contact Number*" value="" required>
+                                                <span id="contact-error" class="error-message"></span>
+                                            </div>
+                                            <div class="formInput">
+                                                <input id="email" name="email" type="text" placeholder="Your Email"
+                                                    value="">
+                                                <span id="email-error" class="error-message"></span>
+                                            </div>
+                                            <div class="formInput">
+                                                <textarea id="message" name="message" placeholder="Message"></textarea>
+                                                <span id="message-error" class="error-message"></span>
+
+                                            </div>
                                             <input type="submit" value="Submit">
                                         </form>
                                     </div>
@@ -408,7 +468,8 @@
                         <div class="col-md-4">
                             <div class="footer-sec">
                                 <h3>find us</h3>
-                                <span>205, Abhiraj Complex, <br> 68B Swastik Society, Navrangpura, Ahmedabad- 380009</span>
+                                <span>205, Abhiraj Complex, <br> 68B Swastik Society, Navrangpura, Ahmedabad-
+                                    380009</span>
                             </div>
                         </div>
 
@@ -485,7 +546,69 @@
 
     <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
 
+    <!-- Contact Form -->
     <script>
+        function validateForm(event) {
+            var nameInput = document.forms["myForm"]["name"];
+            var emailInput = document.forms["myForm"]["email"];
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            var phoneInput = document.forms["myForm"]["contact"];
+            var phonePattern = /^(?:(?:\+|0{0,2})91(\s*[-]\s*)?|[0]?)?[6789]\d{9}$/;
+            var msgInput = document.forms["myForm"]["message"];
+
+            if (!nameInput.checkValidity()) {
+                document.getElementById("name-error").innerHTML = "Please enter your name.";
+                return false;
+            } else {
+                document.getElementById("name-error").innerHTML = "";
+            }
+
+            if (emailInput.value !== "" && (!emailInput.checkValidity() || !emailPattern.test(emailInput.value))) {
+                document.getElementById("email-error").innerHTML = "Please enter a valid email address.";
+                return false;
+            } else {
+                document.getElementById("email-error").innerHTML = "";
+            }
+
+            if (!phoneInput.checkValidity() || !phonePattern.test(phoneInput.value)) {
+                document.getElementById("contact-error").innerHTML = "Please enter a valid phone number.";
+                return false;
+            } else {
+                document.getElementById("contact-error").innerHTML = "";
+            }
+
+            if (!msgInput.checkValidity()) {
+                document.getElementById("message-error").innerHTML = "Please enter your message.";
+                return false;
+            } else {
+                document.getElementById("message-error").innerHTML = "";
+            }
+
+            // emailJS
+            var params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                contact: document.getElementById("contact").value,
+                message: document.getElementById("message").value,
+            }
+            emailjs.send("service_eipqqgk", "template_mz1eqy2", params).then(function (res) {
+                alert("Your form is submitted successfully!")
+            })
+
+            // Reset Form Data
+            event.target.reset();
+
+            // showPopup(); // Call function to show popup
+            // return true;
+        }
+
+        // function showPopup() {
+        //     alert("Form submitted successfully!");
+        // }
+    </script>
+
+
+    <!-- <script>
         const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
 
         accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
@@ -615,7 +738,7 @@
             // Reset the form
             this.reset();
         });
-    </script>
+    </script> -->
 
 
 

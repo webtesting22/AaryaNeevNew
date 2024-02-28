@@ -1265,7 +1265,7 @@ span.big-text {
     font-size: 18px;
     color: #222222;
     padding: 0px 0 10px 0;
-    margin: 0 0 30px 0;
+    /* margin: 0 0 30px 0; */
 }
 
 .news-detail .comment-form .form textarea {
@@ -1276,7 +1276,7 @@ span.big-text {
     color: #222222;
     padding: 0px 0 10px 0;
     margin: 0 0 30px 0;
-    height: 202px;
+    height: 100px;
 }
 
 /*..... CONATCT US ......*/
@@ -1327,7 +1327,20 @@ span.big-text {
     font-size: 18px;
     color: #222222;
     padding: 0px 0 10px 0;
-    margin: 0 0 30px 0;
+    /* margin: 0 0 30px 0; */
+}
+
+.formInput{
+    margin-bottom: 20px;
+}
+.formInput span{
+    color: #cf1a1a;
+}
+
+.errorStyle{
+    margin-left: 10px;
+    color: #cf1a1a;
+    font-size: 14px;
 }
 
 .contact-detail .inquiries .form textarea {
@@ -1338,7 +1351,7 @@ span.big-text {
     color: #222222;
     padding: 0px 0 10px 0;
     margin: 0 0 30px 0;
-    height: 202px;
+    height: 100px;
 }
 
 /*..... MAP ......*/
@@ -1600,9 +1613,9 @@ span.big-text {
 }
 
 .statistics-card {
-    width: 150px;
+    /* width: 150px; */
     height: auto;
-    margin: 0px 100px;
+    /* margin: 0px 100px; */
     /* margin-right: 60px; */
 }
 
